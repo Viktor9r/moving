@@ -8,10 +8,13 @@ import '../MainPage/style.scss'
 import { PhoneInput } from 'react-international-phone';
 import '../MainPage/phoneStyles.scss'
 import { Alert, Snackbar } from "@mui/material";
+import { CalendarDialog } from "../Dialogs/CalendarDialog/CalendarDialog";
 
 export const FormPage: React.FC = () => {
     const [error, setError] = useState('');
     const [isSucces, setIsSuccess] = useState(false);
+    const [openCalendar, setOpenCalendar] = useState(false)
+
     const [formData, setFormData] = useState({
         zip12: '',
         zip22: '',
@@ -131,9 +134,9 @@ export const FormPage: React.FC = () => {
                             </StyledFormPageBottomLeftTitle>
 
                             <StyledFormPageBottomLeftContact
-                                to='tel:6476414631'
+                                to='tel:4378989777'
                             >
-                                +1 (416) 450-5144
+                                +1 (437) 898-9777
                             </StyledFormPageBottomLeftContact>
                         </StyledFormPageBottomLeftBottomBlock>
                     </StyledFormPageBottomLeftBottom>
@@ -148,8 +151,8 @@ export const FormPage: React.FC = () => {
                         <StyledFormInputsFirstLine>
                             <StyledMainPageFieldBlock
                                 sx={{
-                                    minWidth: 'calc(100%/4 - 14px)',
-                                    maxWidth: 'calc(100%/4 - 14px)',
+                                    minWidth: 'calc(100%/4 - 8px)',
+                                    maxWidth: 'calc(100%/4 - 8px)',
                                 }}
                             >
                                 <StyledFieldBlockTitle htmlFor="zip12">
@@ -171,8 +174,8 @@ export const FormPage: React.FC = () => {
 
                             <StyledMainPageFieldBlock
                                 sx={{
-                                    minWidth: 'calc(100%/4 - 14px)',
-                                    maxWidth: 'calc(100%/4 - 14px)',
+                                    minWidth: 'calc(100%/4 - 8px)',
+                                    maxWidth: 'calc(100%/4 - 8px)',
                                 }}
                             >
                                 <StyledFieldBlockTitle htmlFor="zip22">
@@ -194,8 +197,8 @@ export const FormPage: React.FC = () => {
 
                             <StyledMainPageFieldBlock
                                 sx={{
-                                    minWidth: 'calc(100%/4 - 14px)',
-                                    maxWidth: 'calc(100%/4 - 14px)',
+                                    minWidth: 'calc(100%/4 - 8px)',
+                                    maxWidth: 'calc(100%/4 - 8px)',
                                 }}
                             >
                                 <StyledFieldBlockTitle htmlFor="name2">
@@ -217,15 +220,23 @@ export const FormPage: React.FC = () => {
 
                             <StyledMainPageFieldBlock
                                 sx={{
-                                    minWidth: 'calc(100%/4 - 14px)',
-                                    maxWidth: 'calc(100%/4 - 14px)',
+                                    minWidth: 'calc(100%/4 - 8px)',
+                                    maxWidth: 'calc(100%/4 - 8px)',
                                 }}
                             >
                                 <StyledFieldBlockTitle htmlFor="date">
                                     Moving Date*
                                 </StyledFieldBlockTitle>
 
-                                <DatePicker
+                                <StyledFieldBlockInput
+                                    placeholder="Choose date"
+                                    onClick={() => setOpenCalendar(true)}
+                                    value={formData.date === null ? '' : format(formData.date, 'dd MMM, yyyy')}
+                                    sx={{
+                                        height: '40px',
+                                    }}
+                                />
+                                {/* <DatePicker
                                     date={formData.date || undefined}
                                     onDateChange={handleDate}
                                     locale={enUS}
@@ -241,7 +252,7 @@ export const FormPage: React.FC = () => {
                                             }}
                                         />
                                     )}
-                                </DatePicker>
+                                </DatePicker> */}
                             </StyledMainPageFieldBlock>
 
                         </StyledFormInputsFirstLine>
@@ -355,6 +366,15 @@ export const FormPage: React.FC = () => {
                     </Alert>
                 )}
             </Snackbar>
+
+            {openCalendar && (
+                <CalendarDialog
+                    open={openCalendar}
+                    onClose={() => setOpenCalendar(false)} // Corrected here
+                    date={formData.date}
+                    handleDate={handleDate}
+                />
+            )}
         </StyledFormPage>
     )
 }

@@ -2,7 +2,7 @@ import { ArrowLeft, ArrowRight, KeyboardArrowLeft, KeyboardArrowRight, StarRateR
 import { StyledReviewCell, StyledReviewCellBottom, StyledReviewCellBottomLeft, StyledReviewCellBottomRight, StyledReviewCellBottomRightPlaceholder, StyledReviewCellDate, StyledReviewCellName, StyledReviewCellReview, StyledReviewCellTop, StyledReviewsIconCell, StyledReviewsRow, StyledReviewsSection, StyledReviewsSectionRight, StyledReviewsSectionTitle, StyledReviewsSectionTop } from "./styled"
 import alex from '../../resources/images/alex.png'
 import { useEffect, useRef, useState } from "react";
-import { Rating } from "@mui/material";
+import { Rating, useMediaQuery } from "@mui/material";
 
 export const ReviewsSection: React.FC = () => {
     const reviewsList = [
@@ -34,6 +34,8 @@ export const ReviewsSection: React.FC = () => {
             link: 'https://maps.app.goo.gl/BTSRTeJ6h6Sid4eZ8'
         },
     ];
+
+    const mobile = useMediaQuery('(max-width:1000px)');
 
     const scrollableRef = useRef<HTMLDivElement | null>(null);
     const [isScrollVisible, setIsScrollVisible] = useState<boolean>(false);
@@ -103,26 +105,32 @@ export const ReviewsSection: React.FC = () => {
                     Our customers say
                 </StyledReviewsSectionTitle>
 
-                <StyledReviewsSectionRight>
-                    <StyledReviewsIconCell
-                        onClick={() => onScroll(-1)}
-                        style={{
-                            backgroundColor: isAtStart ? 'gray' : '#00302E',
-                            border: isAtStart ? '2px solid gray' : '2px solid #00302E',
-                        }}
-                    >
-                        <KeyboardArrowLeft />
-                    </StyledReviewsIconCell>
-                    <StyledReviewsIconCell
-                        onClick={() => onScroll(1)}
-                        style={{
-                            backgroundColor: isAtEnd ? 'gray' : '#00302E',
-                            border: isAtEnd ? '2px solid gray' : '2px solid #00302E'
-                        }}
-                    >
-                        <KeyboardArrowRight />
-                    </StyledReviewsIconCell>
-                </StyledReviewsSectionRight>
+                {mobile && (
+                    <div style={{color: 'grey'}}>Scroll to the side to see more*</div>
+                )}
+
+                {!mobile && (
+                    <StyledReviewsSectionRight>
+                        <StyledReviewsIconCell
+                            onClick={() => onScroll(-1)}
+                            style={{
+                                backgroundColor: isAtStart ? 'gray' : '#00302E',
+                                border: isAtStart ? '2px solid gray' : '2px solid #00302E',
+                            }}
+                        >
+                            <KeyboardArrowLeft />
+                        </StyledReviewsIconCell>
+                        <StyledReviewsIconCell
+                            onClick={() => onScroll(1)}
+                            style={{
+                                backgroundColor: isAtEnd ? 'gray' : '#00302E',
+                                border: isAtEnd ? '2px solid gray' : '2px solid #00302E'
+                            }}
+                        >
+                            <KeyboardArrowRight />
+                        </StyledReviewsIconCell>
+                    </StyledReviewsSectionRight>
+                )}
             </StyledReviewsSectionTop>
 
             <StyledReviewsRow ref={scrollableRef}>
@@ -152,8 +160,8 @@ export const ReviewsSection: React.FC = () => {
                                         name="read-only"
                                         value={item.rating}
                                         readOnly
-                                        icon={<StarRateRounded fontSize="inherit" style={{transform: 'scale(1.2)', fill: '#00302E'}} />}
-                                        emptyIcon={<StarRateRounded fontSize="inherit" style={{transform: 'scale(1.2)'}} />}
+                                        icon={<StarRateRounded fontSize="inherit" style={{ transform: 'scale(1.2)', fill: '#00302E' }} />}
+                                        emptyIcon={<StarRateRounded fontSize="inherit" style={{ transform: 'scale(1.2)' }} />}
                                     />
                                 </StyledReviewCellBottomLeft>
 

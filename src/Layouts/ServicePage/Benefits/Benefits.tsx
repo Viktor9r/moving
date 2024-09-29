@@ -16,7 +16,17 @@ export const ServiceBenefits: React.FC<IProps> = ({ benefits }) => {
                 <StyledServiceBenefitsTop>
                     <StyledServicePageTitle sx={{ color: '#000' }}>Benefits</StyledServicePageTitle>
 
-                    <TrustPageOptionsQuoteButton onClick={() => setOpenQuoteDialog(true)}>Free quote</TrustPageOptionsQuoteButton>
+                    <TrustPageOptionsQuoteButton
+                        onClick={() => setOpenQuoteDialog(true)}
+                        sx={{
+                            ['@media (max-width: 1000px)']: {
+                                // height: "fit-content",
+                                height: '50px'
+                            }
+                        }}
+                    >
+                        Free quote
+                    </TrustPageOptionsQuoteButton>
                 </StyledServiceBenefitsTop>
 
                 <StyledServiceBenefitsList>

@@ -14,7 +14,8 @@ $nice-dates-cell-width: calc(100% / 7);
   font-family: Montserrat, sans-serif;
   &-navigation {
     align-items: center;
-    color: $nice-dates-color-gray-dark;
+    color: #fff !important;
+    font-size: 24px !important;
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -24,7 +25,7 @@ $nice-dates-cell-width: calc(100% / 7);
 
     &_current {
       flex-grow: 1;
-      font-size: $nice-dates-font-size-big;
+      font-size: 24px !important;
     }
 
     &_previous, &_next {
@@ -35,8 +36,8 @@ $nice-dates-cell-width: calc(100% / 7);
       width: $nice-dates-cell-width;
 
       &:before {
-        border-right: 2px solid $nice-dates-color-gray;
-        border-top: 2px solid $nice-dates-color-gray;
+        border-right: 2px solid #fff !important;
+        border-top: 2px solid #fff !important;
         box-sizing: border-box;
         content: '';
         display: block;
@@ -52,7 +53,7 @@ $nice-dates-cell-width: calc(100% / 7);
       }
 
       &:hover:before {
-        border-color: $nice-dates-color-accent;
+        border-color: #fff !important;
       }
 
       &.-disabled {
@@ -60,7 +61,7 @@ $nice-dates-cell-width: calc(100% / 7);
         pointer-events: none;
 
         &:before {
-          border-color: $nice-dates-color-gray-light;
+          border-color: #fff !important;
         }
       }
     }
@@ -140,6 +141,7 @@ $nice-dates-cell-width: calc(100% / 7);
       transition: 150ms color;
       will-change: color;
       z-index: 3;
+      color: lightgrey
     }
 
     &_month {
@@ -257,6 +259,7 @@ $nice-dates-cell-width: calc(100% / 7);
       &:before, &:after {
         left: 12.5%;
         right: 12.5%;
+        background: #00302E !important
       }
     }
 
@@ -276,30 +279,23 @@ $nice-dates-cell-width: calc(100% / 7);
     border-radius: 20px;
     box-shadow: 0 1px 8px rgba(#000, .12);
     margin: 8px 0;
-    max-width: 600px;
-    right: -14px;
-    padding: 0 20px;
-    bottom: 50px;
-    position: absolute;
+    right: 0;
+    padding: 20px;
+    bottom: 60px;
+    position: relative;
     transform-origin: top;
     transition-property: transform, opacity;
     transition-duration: 400ms;
     transition-timing-function: cubic-bezier(.4, .2, 0, 1.1);
-    width: 400px !important;
+    width: 100% !important;
     will-change: transform, opacity;
     box-shadow: 0px 0px 36px 12px rgba(0,0,0,0.75);
-    z-index: 999 !important;
+    z-index: 9;
 
     &:not(.-open) {
       opacity: 0;
       pointer-events: none;
       transform: perspective(1000px) rotateX(-15deg);
-    }
-
-    @media (max-width: 1000px) {
-      max-width: 80vw;
-      left: 0;
-      transform: translateX(-20px);
     }
   }
 }

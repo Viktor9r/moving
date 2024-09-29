@@ -65,11 +65,11 @@ export const AppHeader: React.FC<IProps> = () => {
                                         info@fcmmovers.com
                                     </HeaderLink>
                                     <HeaderPipe />
-                                    <HeaderLink to="tel:4164505144">
+                                    <HeaderLink to="tel:4378989777">
                                         <HeaderIcon>
                                             <PhoneIphoneOutlined />
                                         </HeaderIcon>
-                                        +1 (416) 450-5144
+                                        +1 (437) 898-9777
                                     </HeaderLink>
                                     <HeaderPipe />
                                     <MainPageOptionsQuoteButton
@@ -131,6 +131,18 @@ export const AppHeader: React.FC<IProps> = () => {
                             {item.title}
                         </MobileHeaderLinksLink>
                     ))}
+                    <MobileHeaderLinksLink
+                        to={'/faq-page'}
+                        sx={{
+                            textDecoration: location.pathname === '/faq-page' ? 'underline' : 'none'
+                        }}
+                        onClick={() => {
+                            window.scrollTo({ top: 0 });
+                            setShowMobileMenu(false)
+                        }}
+                    >
+                        FAQ Page
+                    </MobileHeaderLinksLink>
                 </MobileHeaderLinksList>
 
                 <div
@@ -177,7 +189,7 @@ export const AppHeader: React.FC<IProps> = () => {
                             fill: '#fff'
                         }
                     }}
-                    to='tel:6476414631'
+                    to='tel:4378989777'
                 >
                     <HeaderIcon sx={{
                         mr: 1,
@@ -188,7 +200,7 @@ export const AppHeader: React.FC<IProps> = () => {
                     }}>
                         <PhoneIphoneOutlined />
                     </HeaderIcon>
-                    +11111111111
+                    +1 (437) 898-9777
                 </HeaderLink>
 
                 <MainPageOptionsQuoteButton

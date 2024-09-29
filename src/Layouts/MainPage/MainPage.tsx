@@ -22,11 +22,13 @@ import { PhoneInput } from 'react-international-phone';
 import './phoneStyles.scss';
 import './style.scss';
 import { Alert, Snackbar, useMediaQuery } from "@mui/material";
+import { CalendarDialog } from "../Dialogs/CalendarDialog/CalendarDialog";
 
 export const MainPage: React.FC = () => {
     const [error, setError] = useState('');
     const [isSucces, setIsSuccess] = useState(false);
     const mobile = useMediaQuery('(max-width:1000px)');
+    const [openCalendar, setOpenCalendar] = useState(false)
 
     const [formData, setFormData] = useState({
         zip1: '',
@@ -117,154 +119,171 @@ export const MainPage: React.FC = () => {
             <StyledMainPageTop>
                 <StyledMainPageTitle>
                     The First-Class Experience in Moving!
+
+                    {mobile && (
+                        <div style={{ fontSize: '18px', fontWeight: 500 }}>
+                            <br />
+                            Get your free moving estimate.<br /> Fill out the form.
+                        </div>
+                    )}
                 </StyledMainPageTitle>
 
                 {!mobile && (
                     <StyledMainPageSubTitle>
-                        Calculate Moving costs.<br /> Fill out the form below.
+                        Get your free moving estimate.<br /> Fill out the form below.
                     </StyledMainPageSubTitle>
                 )}
             </StyledMainPageTop>
 
-            <StyledMainPageForm onSubmit={onSubmit}>
-                {mobile && (
-                    <StyledMainPageSubTitle
-                        sx={{
-                            backdropFilter: 'none',
-                            borderRadius: '0',
-                            fontSize: '16px',
-                            padding: '0',
-                            fontWeight: 500,
-                            transform: 'none',
-                            mb: 1
-                        }}
-                    >
-                        Calculate Moving costs.<br /> Fill out the form below.
-                    </StyledMainPageSubTitle>
-                )}
-                <StyledMainPageFormTop>
-                    <StyledMainPageFieldBlock>
-                        <StyledFieldBlockTitle htmlFor="zip1">
-                            Landing address*
-                        </StyledFieldBlockTitle>
-
-                        <StyledFieldBlockInput
-                            id="zip1"
-                            placeholder="ZIP code"
-                            required
-                            onChange={handleInputChange}
-                            value={formData.zip1}
-                            name="zip1"
-                        />
-                    </StyledMainPageFieldBlock>
-
-                    <StyledMainPageFieldBlock>
-                        <StyledFieldBlockTitle htmlFor="zip2">
-                            Where are we going?*
-                        </StyledFieldBlockTitle>
-
-                        <StyledFieldBlockInput
-                            id="zip2"
-                            placeholder="ZIP code"
-                            required
-                            onChange={handleInputChange}
-                            value={formData.zip2}
-                            name="zip2"
-                        />
-                    </StyledMainPageFieldBlock>
-
-                    <StyledMainPageFieldBlock>
-                        <StyledFieldBlockTitle htmlFor="name">
-                            Full name*
-                        </StyledFieldBlockTitle>
-
-                        <StyledFieldBlockInput
-                            id="name"
-                            placeholder="Andrew Smith"
-                            required
-                            onChange={handleInputChange}
-                            value={formData.name}
-                            name="name"
-                        />
-                    </StyledMainPageFieldBlock>
-
-                    <StyledMainPageFieldBlock>
-                        <StyledFieldBlockTitle htmlFor="email">
-                            Email*
-                        </StyledFieldBlockTitle>
-
-                        <StyledFieldBlockInput
-                            id="email"
-                            placeholder="example@gmail.com"
-                            required
-                            type="email"
-                            onChange={handleInputChange}
-                            value={formData.email}
-                            name="email"
-                        />
-                    </StyledMainPageFieldBlock>
-
-                    <StyledMainPageFieldBlock>
-                        <StyledFieldBlockTitle htmlFor="phone">
-                            Phone*
-                        </StyledFieldBlockTitle>
-                        <PhoneInput
-                            defaultCountry="ca"
-                            value={formData.phone}
-                            onChange={handlePhone}
-                        />
-                    </StyledMainPageFieldBlock>
-
-                    <StyledMainPageFieldBlock>
-                        <StyledFieldBlockTitle htmlFor="date">
-                            Moving Date*
-                        </StyledFieldBlockTitle>
-
-                        <DatePicker
-                            date={formData.date || undefined}
-                            onDateChange={handleDate}
-                            locale={enUS}
-                            minimumDate={new Date()}
+            {!mobile && (
+                <StyledMainPageForm onSubmit={onSubmit}>
+                    {mobile && (
+                        <StyledMainPageSubTitle
+                            sx={{
+                                backdropFilter: 'none',
+                                borderRadius: '0',
+                                fontSize: '16px',
+                                padding: '0',
+                                fontWeight: 500,
+                                transform: 'none',
+                                mb: 1
+                            }}
                         >
-                            {({ inputProps, focused }) => (
-                                <StyledFieldBlockInput
-                                    className={'input' + (focused ? ' -focused' : '')}
-                                    {...inputProps}
-                                    placeholder="Choose date"
-                                    sx={{
-                                        width: 'calc(100% - 30px)'
-                                    }}
-                                />
-                            )}
-                        </DatePicker>
-                    </StyledMainPageFieldBlock>
-                </StyledMainPageFormTop>
+                            Calculate Moving costs.<br /> Fill out the form below.
+                        </StyledMainPageSubTitle>
+                    )}
+                    <StyledMainPageFormTop>
+                        <StyledMainPageFieldBlock>
+                            <StyledFieldBlockTitle htmlFor="zip1">
+                                Landing address*
+                            </StyledFieldBlockTitle>
 
-                <StyledFormBottom>
-                    <StyledMainPageFieldBlock
-                        sx={{
-                            minWidth: 'calc(50% - 6px)',
-                            maxWidth: 'calc(50% - 6px)'
-                        }}
-                    >
-                        <StyledFieldBlockTitle htmlFor="details">
-                            Message
-                        </StyledFieldBlockTitle>
+                            <StyledFieldBlockInput
+                                id="zip1"
+                                placeholder="ZIP code"
+                                required
+                                onChange={handleInputChange}
+                                value={formData.zip1}
+                                name="zip1"
+                            />
+                        </StyledMainPageFieldBlock>
 
-                        <StyledFieldBlockTextArea
-                            id="details"
-                            placeholder="Enter your message..."
-                            onChange={handleInputChange}
-                            value={formData.message}
-                            name="message"
-                        />
-                    </StyledMainPageFieldBlock>
+                        <StyledMainPageFieldBlock>
+                            <StyledFieldBlockTitle htmlFor="zip2">
+                                Where are we going?*
+                            </StyledFieldBlockTitle>
 
-                    <StyledFormSubmit type="submit">
-                        Send Request
-                    </StyledFormSubmit>
-                </StyledFormBottom>
-            </StyledMainPageForm>
+                            <StyledFieldBlockInput
+                                id="zip2"
+                                placeholder="ZIP code"
+                                required
+                                onChange={handleInputChange}
+                                value={formData.zip2}
+                                name="zip2"
+                            />
+                        </StyledMainPageFieldBlock>
+
+                        <StyledMainPageFieldBlock>
+                            <StyledFieldBlockTitle htmlFor="name">
+                                Full name*
+                            </StyledFieldBlockTitle>
+
+                            <StyledFieldBlockInput
+                                id="name"
+                                placeholder="Andrew Smith"
+                                required
+                                onChange={handleInputChange}
+                                value={formData.name}
+                                name="name"
+                            />
+                        </StyledMainPageFieldBlock>
+
+                        <StyledMainPageFieldBlock>
+                            <StyledFieldBlockTitle htmlFor="email">
+                                Email*
+                            </StyledFieldBlockTitle>
+
+                            <StyledFieldBlockInput
+                                id="email"
+                                placeholder="example@gmail.com"
+                                required
+                                type="email"
+                                onChange={handleInputChange}
+                                value={formData.email}
+                                name="email"
+                            />
+                        </StyledMainPageFieldBlock>
+
+                        <StyledMainPageFieldBlock>
+                            <StyledFieldBlockTitle htmlFor="phone">
+                                Phone*
+                            </StyledFieldBlockTitle>
+                            <PhoneInput
+                                defaultCountry="ca"
+                                value={formData.phone}
+                                onChange={handlePhone}
+                            />
+                        </StyledMainPageFieldBlock>
+
+                        <StyledMainPageFieldBlock>
+                            <StyledFieldBlockTitle htmlFor="date">
+                                Moving Date*
+                            </StyledFieldBlockTitle>
+
+                            {/* <DatePicker
+                                date={formData.date || undefined}
+                                onDateChange={handleDate}
+                                locale={enUS}
+                                minimumDate={new Date()}
+                            >
+                                {({ inputProps, focused }) => (
+                                    <StyledFieldBlockInput
+                                        className={'input' + (focused ? ' -focused' : '')}
+                                        {...inputProps}
+                                        placeholder="Choose date"
+                                        sx={{
+                                            width: 'calc(100% - 30px)'
+                                        }}
+                                    />
+                                )}
+                            </DatePicker> */}
+                            <StyledFieldBlockInput
+                                placeholder="Choose date"
+                                onClick={() => setOpenCalendar(true)}
+                                value={formData.date === null ? '' : format(formData.date, 'dd MMM, yyyy')}
+                                sx={{
+                                    width: 'calc(100% - 30px)'
+                                }}
+                            />
+                        </StyledMainPageFieldBlock>
+                    </StyledMainPageFormTop>
+
+                    <StyledFormBottom>
+                        <StyledMainPageFieldBlock
+                            sx={{
+                                minWidth: 'calc(50% - 6px)',
+                                maxWidth: 'calc(50% - 6px)'
+                            }}
+                        >
+                            <StyledFieldBlockTitle htmlFor="details">
+                                Message
+                            </StyledFieldBlockTitle>
+
+                            <StyledFieldBlockTextArea
+                                id="details"
+                                placeholder="Enter your message..."
+                                onChange={handleInputChange}
+                                value={formData.message}
+                                name="message"
+                            />
+                        </StyledMainPageFieldBlock>
+
+                        <StyledFormSubmit type="submit">
+                            Send Request
+                        </StyledFormSubmit>
+                    </StyledFormBottom>
+                </StyledMainPageForm>
+            )}
 
             {/* Snackbar for success or error */}
             <Snackbar
@@ -298,6 +317,15 @@ export const MainPage: React.FC = () => {
                     </Alert>
                 )}
             </Snackbar>
+
+            {openCalendar && (
+                <CalendarDialog
+                    open={openCalendar}
+                    onClose={() => setOpenCalendar(false)} // Corrected here
+                    date={formData.date}
+                    handleDate={handleDate}
+                />
+            )}
         </StyledMainPage>
     );
 };

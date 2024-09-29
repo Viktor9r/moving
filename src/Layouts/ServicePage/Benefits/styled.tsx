@@ -8,6 +8,12 @@ export const StyledServiceBenefits = styled('div')(({}) => ({
     marginBottom: '30px',
     padding: '30px',
     borderRadius: '40px',
+
+    ['@media (max-width: 1000px)']: {
+        // height: "fit-content",
+        height: 'fit-content',
+        padding: '30px 16px 16px'
+    }
 }))
 
 export const StyledServiceBenefitsTop = styled('div')(() => ({
@@ -15,7 +21,7 @@ export const StyledServiceBenefitsTop = styled('div')(() => ({
     gap: '40px',
     width: '100%',
     justifyContent: 'space-between',
-    alignItems: 'center'
+    alignItems: 'center',
 }))
 
 export const StyledServiceBenefitsContent = styled('div')(() => ({
@@ -27,6 +33,10 @@ export const StyledServiceBenefitsContent = styled('div')(() => ({
     maxWidth: '1100px',
     width: '100%',
     margin: '0 auto',
+
+    ['@media (max-width: 1000px)']: {
+        gap: '24px'
+    }
 }))
 
 export  const StyledServiceBenefitsList = styled('div')(() => ({
@@ -34,7 +44,11 @@ export  const StyledServiceBenefitsList = styled('div')(() => ({
     width: '100%',
     gap: '12px',
     alignItems: 'center',
-    height: 'fit-content'
+    height: 'fit-content',
+
+    ['@media (max-width: 1000px)']: {
+        flexDirection: 'column',
+    }
 }))
 
 export const StyledServiceBenefitItem = styled('div')(() => ({
@@ -45,6 +59,11 @@ export const StyledServiceBenefitItem = styled('div')(() => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+
+    ['@media (max-width: 1000px)']: {
+        width: 'calc(100% - 40px)',
+        borderRadius: '30px',
+    }
 }))
 
 export const StyledServiceBenefitTitle = styled('div')(() => ({

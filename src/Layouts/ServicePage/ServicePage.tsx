@@ -10,8 +10,13 @@ import { FormPage } from "../Form/Form";
 import { MainPageOptions } from "../MainPageOptions/MainPageOptions"
 import { ServiceBenefits } from "./Benefits/Benefits";
 import { StyledServicePageMain, StyledServicePageAbout, StyledServicePageSubTitle, StyledServicePageTitle, StyledServicePageTop, StyledServicePageTopButton, StyledServicePageAboutContent, StyledServicePageAboutRight, StyledServicePageAboutImage } from "./styled";
+import { useMediaQuery } from "@mui/material";
+import { MobileBottomBar } from "../MobileBottomBar/MobileBottomBar";
 
 export const ServicePage: React.FC = () => {
+
+    const mobile = useMediaQuery('(max-width:1000px)');
+
     const {
         visibleService
     } = useSerivcePageDataStorage();
@@ -25,7 +30,9 @@ export const ServicePage: React.FC = () => {
     if (service) {
         return (
             <AppOuterContainer>
-                <MainPageOptions />
+                {!mobile && (
+                    <MainPageOptions />
+                )}
 
                 <StyledServicePageMain
                     background={service!.gallery[0].photo}
@@ -39,11 +46,13 @@ export const ServicePage: React.FC = () => {
                             {service?.subTitle}
                         </StyledServicePageSubTitle>
 
-                        <StyledServicePageTopButton
-                            onClick={() => setOpenQuoteDialog(true)}
-                        >
-                            Free quote
-                        </StyledServicePageTopButton>
+                        {!mobile && (
+                            <StyledServicePageTopButton
+                                onClick={() => setOpenQuoteDialog(true)}
+                            >
+                                Free quote
+                            </StyledServicePageTopButton>
+                        )}
                     </StyledServicePageTop>
                 </StyledServicePageMain>
 
@@ -60,13 +69,20 @@ export const ServicePage: React.FC = () => {
                                 background: '#00302E',
                                 borderTopRightRadius: '20px',
                                 borderBottomRightRadius: '20px',
-                                fontSize: '28px'
+                                fontSize: '28px',
+
+                                ['@media (max-width: 1000px)']: {
+                                    borderTopRightRadius: '0',
+                                    borderBottomRightRadius: '30px',
+                                    borderBottomLeftRadius: '30px',
+                                    fontSize: '22px'
+                                }
                             }}>
                                 {service.subTitle2}
                             </StyledServicePageTitle>
                             <br></br>
                             <div style={{
-                                padding: '0px 20px 20px 36px',
+                                padding: mobile ? '0px 0px 16px 0' : '0px 20px 20px 36px',
                             }}>
                                 {service.about.split('\n').map((line: any, index: any) => (
                                     <React.Fragment key={index}>
@@ -89,9 +105,15 @@ export const ServicePage: React.FC = () => {
 
                 <FAQPage questions={[...questionsList.filter((item: any) => item.type === service.id)]} />
 
-                <FormPage />
+                {!mobile && (
+                    <FormPage />
+                )}
 
                 <Footer servicesList={servicesList} />
+
+                {mobile && (
+                    <MobileBottomBar />
+                )}
             </AppOuterContainer>
         )
     }

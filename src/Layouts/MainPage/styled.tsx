@@ -17,9 +17,11 @@ export const StyledMainPage = styled('div')(() => ({
     gap: '40px',
 
     ['@media (max-width: 1000px)']: {
-        marginTop: '80px',
-        height: "fit-content",
-        padding: '30px 10px'
+        marginTop: '70px',
+        // height: "fit-content",
+        height: 'calc(100vh - 100px)',
+        justifyContent: 'space-between',
+        padding: '0'
     }
 }))
 
@@ -51,7 +53,11 @@ export const StyledMainPageTitle = styled('div')(() => ({
 
     ['@media (max-width: 1000px)']: {
         maxWidth: '100%',
-        transform: 'none'
+        transform: 'none',
+        fontSize: '30px',
+        paddingBottom: '24px',
+        borderBottomRightRadius: 0,
+        borderBottomLeftRadius: 0
     }
 }))
 
@@ -66,7 +72,8 @@ export const StyledMainPageSubTitle = styled('div')(() => ({
 
     ['@media (max-width: 1000px)']: {
         maxWidth: '100%',
-        transform: 'none'
+        transform: 'none',
+        fontSize: '18px',
     }
 }))
 
@@ -84,10 +91,11 @@ export const StyledMainPageForm = styled('form')(() => ({
     maxWidth: '1100px',
 
     ['@media (max-width: 1000px)']: {
-        padding: '30px 16px',
+        padding: '16px 0',
         width: 'auto',
         margin: '0',
-        alignItems: 'flex-start'
+        alignItems: 'flex-start',
+        backdropFilter: 'none'
     }
 }))
 

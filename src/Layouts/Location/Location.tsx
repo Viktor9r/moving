@@ -79,6 +79,11 @@ export const LocationPage: React.FC = () => {
 
                 <TrustPageOptionsQuoteButton
                     onClick={() => setOpenQuoteDialog(true)}
+                    sx={{
+                        ['@media (max-width: 1000px)']: {
+                            height: '50px'
+                        }
+                    }}
                 >
                     Get a quote
                 </TrustPageOptionsQuoteButton>

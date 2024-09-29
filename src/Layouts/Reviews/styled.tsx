@@ -12,7 +12,13 @@ export const StyledReviewsSection = styled('div')(() => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-evenly',
-    gap: '40px'
+    gap: '40px',
+
+    ['@media (max-width: 1000px)']: {
+        height: 'fit-content',
+        padding: '30px 16px 16px',
+        gap: '24px'
+    }
 }))
 
 export const StyledReviewsSectionTop = styled('div')(() => ({
@@ -22,13 +28,23 @@ export const StyledReviewsSectionTop = styled('div')(() => ({
     gap: '24px',
     maxWidth: '1100px',
     width: '100%',
-    margin: '0 auto'
+    margin: '0 auto',
+
+    ['@media (max-width: 1000px)']: {
+        flexDirection: 'column',
+        alignItems: 'flex-start',
+        gap: '12px'
+    }
 }))
 
 export const StyledReviewsSectionTitle = styled('div')(() => ({
     color: '#000',
     fontWeight: 600,
     fontSize: '44px',
+
+    ['@media (max-width: 1000px)']: {
+        fontSize: '32px',
+    }
 }))
 
 export const StyledReviewsSectionRight = styled('div')(() => ({
@@ -90,6 +106,11 @@ export const StyledReviewCell = styled(Link)(() => ({
     [':hover']: {
         transition: '0.3s',
         border: '2px solid #00302E',
+    },
+
+    ['@media (max-width: 1000px)']: {
+        minWidth: '80%',
+        borderRadius: '30px',
     }
 }))
 

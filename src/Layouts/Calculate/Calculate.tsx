@@ -1,8 +1,10 @@
+import { useMediaQuery } from "@mui/material";
 import { useOpenQuoteDialog } from "../../Storages/useOpenQuoteDialog"
 import { StyledCalculateSection, StyledCalculateSectionContent, StyledCalculateSectionLeft, StyledCalculateSectionQuoteButton, StyledCalculateSectionRight, StyledCalculateSectionSubTitle, StyledCalculateSectionTitle } from "./styled"
 
 export const CalculateSection: React.FC = () => {
     const { setOpenQuoteDialog } = useOpenQuoteDialog()
+    const mobile = useMediaQuery('(max-width:1000px)');
 
     return (
         <StyledCalculateSection>
@@ -18,9 +20,11 @@ export const CalculateSection: React.FC = () => {
                 </StyledCalculateSectionLeft>
 
                 <StyledCalculateSectionRight>
-                    <StyledCalculateSectionQuoteButton onClick={() => setOpenQuoteDialog(true)}>
-                        Get a quote
-                    </StyledCalculateSectionQuoteButton>
+                    {!mobile && (
+                        <StyledCalculateSectionQuoteButton onClick={() => setOpenQuoteDialog(true)}>
+                            Get a quote
+                        </StyledCalculateSectionQuoteButton>
+                    )}
                 </StyledCalculateSectionRight>
             </StyledCalculateSectionContent>
         </StyledCalculateSection>

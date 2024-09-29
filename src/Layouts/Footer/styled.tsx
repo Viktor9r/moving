@@ -11,6 +11,12 @@ export const StyledFooter = styled('div')(() => ({
     borderRadius: '40px',
     display: 'flex',
     alignItems: 'center',
+
+    ['@media (max-width: 1000px)']: {
+        height: 'fit-content',
+        padding: '30px 16px',
+        marginBottom: '90px'
+    }
 }))
 
 export const StyledFooterContent = styled('div')(() => ({
@@ -27,13 +33,21 @@ export const StyledFooterColumn = styled('div')(() => ({
     display: 'flex',
     flexDirection: 'column',
     gap: '36px',
+
+    ['@media (max-width: 1000px)']: {
+        gap: '12px'
+    }
 }))
 
 export const StyledFooterColumnTitle = styled('div')(() => ({
     color: '#000',
     fontWeight: 600,
     fontSize: '30px',
-    minHeight: '73px'
+    minHeight: '73px',
+
+    ['@media (max-width: 1000px)']: {
+        minHeight: 'fit-content'
+    }
 }))
 
 export const StyledFooterColumnContent = styled('div')(() => ({
@@ -91,4 +105,9 @@ export const StyledFooterColumnFlexRow = styled('div')(() => ({
     alignItems: 'center',
     width: '100%',
     justifyContent: 'space-between'
+}))
+
+export const StyletMobileFooterLogo = styled('img')(() => ({
+    width: '90px',
+    height: '90px'
 }))

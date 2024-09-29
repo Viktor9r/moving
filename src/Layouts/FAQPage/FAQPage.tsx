@@ -17,9 +17,12 @@ import { QuestionsList } from "./QuestionsList"
 import { FormPage } from "../Form/Form"
 import { Footer } from "../Footer/Footer"
 import { LocationPage } from "../Location/Location"
+import { MobileBottomBar } from "../MobileBottomBar/MobileBottomBar"
+import { useMediaQuery } from "@mui/material"
 
 export const FAQPage: React.FC = () => {
     const { setOpenQuoteDialog } = useOpenQuoteDialog()
+    const mobile = useMediaQuery('(max-width:1000px)');
 
     const questionsArr = questionsList;
 
@@ -41,7 +44,9 @@ export const FAQPage: React.FC = () => {
 
     return (
         <AppOuterContainer>
-            <MainPageOptions />
+            {!mobile && (
+                <MainPageOptions />
+            )}
 
             <StyledFAQPageMain background={background}>
                 <StyledServicePageTop>
@@ -53,11 +58,13 @@ export const FAQPage: React.FC = () => {
                         You can find answers to the most common questions on this page
                     </StyledServicePageSubTitle>
 
-                    <StyledServicePageTopButton
-                        onClick={() => setOpenQuoteDialog(true)}
-                    >
-                        Free quote
-                    </StyledServicePageTopButton>
+                    {!mobile && (
+                        <StyledServicePageTopButton
+                            onClick={() => setOpenQuoteDialog(true)}
+                        >
+                            Free quote
+                        </StyledServicePageTopButton>
+                    )}
                 </StyledServicePageTop>
             </StyledFAQPageMain>
 
@@ -83,12 +90,19 @@ export const FAQPage: React.FC = () => {
                         sx={{
                             justifyContent: 'space-between',
                             alignItems: 'flex-end',
-                            height: '100%'
+                            height: '100%',
+
+                            ['@media (max-width: 1000px)']: {
+                                alignItems: 'flex-start',
+                                flexDirection: 'column-reverse'
+                            }
                         }}
                     >
                         <TrustPageOptionsQuoteButton onClick={() => setOpenQuoteDialog(true)}>Get a quote</TrustPageOptionsQuoteButton>
 
-                        <StyledFAQPageTopRight>
+                        <StyledFAQPageTopRight
+
+                        >
                             <HeaderLink
                                 onClick={() => window.location.href = 'mailto:info@fcmmovers.com'}
                                 to='javascript:void(0)'
@@ -104,21 +118,25 @@ export const FAQPage: React.FC = () => {
                                 </HeaderIcon>
                                 info@fcmmovers.com
                             </HeaderLink>
-                            <HeaderPipe />
-                            <HeaderLink
-                                to='tel:6476414631'
-                            >
-                                <HeaderIcon sx={{
-                                    mr: 1,
-                                    mb: '1px',
-                                    ['@media (max-height: 799px) and (min-width: 1024px)']: {
-                                        mr: 1
-                                    }
-                                }}>
-                                    <PhoneIphoneOutlined />
-                                </HeaderIcon>
-                                +1 (416) 450-5144
-                            </HeaderLink>
+                            {!mobile && (
+                                <>
+                                    <HeaderPipe />
+                                    <HeaderLink
+                                        to='tel:4378989777'
+                                    >
+                                        <HeaderIcon sx={{
+                                            mr: 1,
+                                            mb: '1px',
+                                            ['@media (max-height: 799px) and (min-width: 1024px)']: {
+                                                mr: 1
+                                            }
+                                        }}>
+                                            <PhoneIphoneOutlined />
+                                        </HeaderIcon>
+                                        +1 (437) 898-9777
+                                    </HeaderLink>
+                                </>
+                            )}
                         </StyledFAQPageTopRight>
                     </StyledFAQPageTopLeft>
                 </StyledFAQPageTop>
@@ -171,9 +189,16 @@ export const FAQPage: React.FC = () => {
 
             <LocationPage />
 
-            <FormPage />
+            {!mobile && (
+                <FormPage />
+
+            )}
 
             <Footer servicesList={servicesList} />
+
+            {mobile && (
+                <MobileBottomBar />
+            )}
         </AppOuterContainer>
     )
 }

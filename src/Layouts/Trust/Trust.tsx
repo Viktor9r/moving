@@ -7,9 +7,12 @@ import { ReactComponent as HiddenFeesIcon } from '../../resources/icons/hiddenfe
 import { ReactComponent as ShieldIcon } from '../../resources/icons/shield.svg';
 import { ReactComponent as WeatherIcon } from '../../resources/icons/weather.svg';
 import { useOpenQuoteDialog } from "../../Storages/useOpenQuoteDialog";
+import { ReactComponent as EquipmentIcon } from '../../resources/icons/dolly.svg';
+import { useMediaQuery } from "@mui/material";
 
 export const TrustPage: React.FC = () => {
     const { setOpenQuoteDialog } = useOpenQuoteDialog()
+    const mobile = useMediaQuery('(max-width:1000px)');
 
     return (
         <StyledTrustPage>
@@ -26,7 +29,9 @@ export const TrustPage: React.FC = () => {
                         We are the city’s only on-demand mover, available 24/7 every day of the year, including holidays, to meet your needs.
                     </StyledTrustPageSubTitle>
 
-                    <TrustPageOptionsQuoteButton onClick={() => setOpenQuoteDialog(true)}>Get a quote</TrustPageOptionsQuoteButton>
+                    {!mobile && (
+                        <TrustPageOptionsQuoteButton onClick={() => setOpenQuoteDialog(true)}>Get a quote</TrustPageOptionsQuoteButton>
+                    )}
                 </StyledTrustPageTopUnder>
             </StyledTrustPageTop>
 
@@ -69,7 +74,28 @@ export const TrustPage: React.FC = () => {
 
                 <StyledTrustPageCell
                     sx={{
-                        borderRight: 0
+                        ['@media (max-width: 1000px)']: {
+                            // height: "fit-content",
+                            borderBottom: 'none',
+                        }
+                    }}
+                >
+                    <StyledTrustIconCell>
+                        <EquipmentIcon />
+                    </StyledTrustIconCell>
+                    <StyledTrustPageCellTitle>
+                        Specialized Equipment
+                    </StyledTrustPageCellTitle>
+                </StyledTrustPageCell>
+
+                <StyledTrustPageCell
+                    sx={{
+                        borderRight: 0,
+
+                        ['@media (max-width: 1000px)']: {
+                            // height: "fit-content",
+                            borderBottom: 'none',
+                        }
                     }}
                 >
                     <StyledTrustIconCell>

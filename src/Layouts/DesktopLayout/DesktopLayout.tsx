@@ -13,6 +13,9 @@ import { FormPage } from "../Form/Form";
 import { Footer } from "../Footer/Footer";
 import { questionsList, servicesList } from "../../resources/data/arrays";
 import { useMediaQuery } from "@mui/material";
+import { MobileBottomContainer } from "../MobileBottomBar/styled";
+import { MobileBottomBar } from "../MobileBottomBar/MobileBottomBar";
+import { MobileForm } from "../MobileForm/MobileForm";
 
 export const DesktopLayout: React.FC = () => {
 
@@ -26,17 +29,27 @@ export const DesktopLayout: React.FC = () => {
                 )}
                 {/* <div style={{height: '300vh'}}></div> */}
                 <MainPage />
-                {/* <Services servicesList={servicesList} /> */}
-                {/* <TrustPage /> */}
-                {/* <CalculateSection /> */}
+                {/* {mobile && (
+                    <MobileForm />
+                )} */}
+                <Services servicesList={servicesList} />
+                <TrustPage />
+                <CalculateSection />
 
                 {/* <AboutPage /> */}
 
-                {/* <ReviewsSection /> */}
-                {/* <FAQPage questions={questionsList.filter((item: any) => item.type === 0).slice(0, 5)} /> */}
-                {/* <LocationPage /> */}
-                {/* <FormPage /> */}
-                {/* <Footer servicesList={servicesList} /> */}
+                <ReviewsSection />
+                <FAQPage questions={questionsList.filter((item: any) => item.type === 0).slice(0, 5)} />
+                <LocationPage />
+
+                {!mobile && (
+                    <FormPage />
+                )}
+                <Footer servicesList={servicesList} />
+
+                {mobile && (
+                    <MobileBottomBar />
+                )}
             </AppOuterContainer>
         </>
     )

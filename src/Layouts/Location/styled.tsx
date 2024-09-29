@@ -11,7 +11,13 @@ export const StyledLocationPage = styled('div')(() => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-evenly',
-    gap: '24px'
+    gap: '24px',
+
+    ['@media (max-width: 1000px)']: {
+        height: 'fit-content',
+        padding: '30px 16px 16px',
+        gap: '24px'
+    }
 }))
 
 export const StyledLocationPageTop = styled('div')(() => ({
@@ -21,13 +27,23 @@ export const StyledLocationPageTop = styled('div')(() => ({
     width: '100%',
     margin: '0 auto',
     justifyContent: 'space-between',
-    alignItems: 'center'
+    alignItems: 'center',
+
+    ['@media (max-width: 1000px)']: {
+        flexDirection: 'column',
+        gap: '24px',
+        alignItems: 'flex-start'
+    }
 }))
 
 export const StyledFLocationPageTitle = styled('div')(() => ({
     color: '#000',
     fontWeight: 600,
     fontSize: '44px',
+
+    ['@media (max-width: 1000px)']: {
+        fontSize: '32px'
+    }
 }))
 
 export const StyledLocationPageBottom = styled('div')(() => ({
@@ -45,7 +61,11 @@ export const StyledLocationPageMapBlock = styled('div')(() => ({
     height: 'calc(50vh - 70px)',
 
     ['div']: {
-        borderRadius: '20px'
+        borderRadius: '20px',
+
+        ['@media (max-width: 1000px)']: {
+            borderRadius: '30px',
+        }
     }
 }))
 
@@ -60,6 +80,11 @@ export const StyledLocationCell = styled('div')(() => ({
 
     [':hover']: {
         borderColor: '#00302E'
+    },
+
+    ['@media (max-width: 1000px)']: {
+        padding: '8px 12px',
+        fontSize: '14px'
     }
 }))
 

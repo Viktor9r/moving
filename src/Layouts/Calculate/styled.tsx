@@ -9,6 +9,12 @@ export const StyledCalculateSection = styled('div')(() => ({
     marginBottom: '30px',
     padding: '30px',
     borderRadius: '40px',
+
+    ['@media (max-width: 1000px)']: {
+        // height: "fit-content",
+        height: 'fit-content',
+        padding: '30px 16px 16px'
+    }
 }))
 
 export const StyledCalculateSectionContent = styled('div')(() => ({
@@ -18,20 +24,33 @@ export const StyledCalculateSectionContent = styled('div')(() => ({
     justifyContent: 'space-between',
     alignItems: 'center',
     height: '100%',
-    gap: '40px'
+    gap: '40px',
+
+    ['@media (max-width: 1000px)']: {
+        flexDirection: 'column',
+        gap: '24px'
+    }
 }))
 
 export const StyledCalculateSectionLeft = styled('div')(() => ({
     display: 'flex',
     flexDirection: 'column',
     width: '42%',
-    gap: '30px'
+    gap: '30px',
+
+    ['@media (max-width: 1000px)']: {
+        width: '100%'
+    }
 }))
 
 export const StyledCalculateSectionTitle = styled('div')(() => ({
     color: '#fff',
     fontWeight: 600,
     fontSize: '44px',
+
+    ['@media (max-width: 1000px)']: {
+        fontSize: '32px'
+    }
 }))
 
 export const StyledCalculateSectionSubTitle = styled('div')(() => ({
@@ -49,7 +68,14 @@ export const StyledCalculateSectionRight = styled('div')(() => ({
     backgroundRepeat: 'no-repeat',
     borderRadius: '20px',
     width: '42%',
-    height: '75%'
+    height: '75%',
+
+    ['@media (max-width: 1000px)']: {
+        // height: "fit-content",
+        height: '300px',
+        width: '100%',
+        borderRadius: '30px',
+    }
 }))
 
 export const StyledCalculateSectionQuoteButton = styled(Button)(() => ({
@@ -65,7 +91,7 @@ export const StyledCalculateSectionQuoteButton = styled(Button)(() => ({
     fontSize: '16px',
     bottom: 20,
     right: 20
-    
+
     // [':hover']: {
     //     boxSizing: 'border-box',
     //     background: '#fff',

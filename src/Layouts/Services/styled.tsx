@@ -14,7 +14,13 @@ export const StyledServicesPage = styled('div')(() => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-evenly',
-    gap: '40px'
+    gap: '40px',
+
+    ['@media (max-width: 1000px)']: {
+        // height: "fit-content",
+        height: 'fit-content',
+        padding: '30px 16px 16px'
+    }
 }))
 
 export const StyledServicesPageTop = styled('div')(() => ({
@@ -24,20 +30,35 @@ export const StyledServicesPageTop = styled('div')(() => ({
     maxWidth: '1100px',
     justifyContent: 'space-between',
     gap: '50px',
-    alignItems: 'center'
+    alignItems: 'center',
+
+    ['@media (max-width: 1000px)']: {
+        flexDirection: 'column',
+        alignItems: 'flex-start',
+        gap: '20px'
+    }
 }));
 
 export const StyledServicesPageTitle = styled('div')(() => ({
     color: '#000',
     fontWeight: 600,
     fontSize: '44px',
+
+    ['@media (max-width: 1000px)']: {
+        // height: "fit-content",
+        fontSize: '32px'
+    }
 }))
 
 export const StyledServicesPageSubTitle = styled('div')(() => ({
     color: '#000',
     fontSize: '14px',
     fontWeight: 500,
-    maxWidth: '30%'
+    maxWidth: '30%',
+
+    ['@media (max-width: 1000px)']: {
+        maxWidth: '100%',
+    }
 }))
 
 export const StyledServicesPageList = styled('div')(() => ({
@@ -57,7 +78,15 @@ export const StyledServiceCell = styled('div')(() => ({
     borderRadius: '20px',
     gap: '18px',
     display: 'flex',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+
+    ['@media (max-width: 1000px)']: {
+        flexDirection: 'column',
+        // height: "fit-content",
+        minWidth: 'calc(100% / 2 - 44px)',
+        maxWidth: 'calc(100% / 2 - 44px)',
+        borderRadius: '30px',
+    }
 }))
 
 export const StyledServiceCellLeft = styled('div')(() => ({
@@ -65,13 +94,22 @@ export const StyledServiceCellLeft = styled('div')(() => ({
     flexDirection: 'column',
     gap: '36px',
     maxWidth: '70%',
-    minWidth: '70%'
+    minWidth: '70%',
+
+    ['@media (max-width: 1000px)']: {
+        maxWidth: '100%',
+        minWidth: '100%',
+    }
 }))
 
 export const StyledServiceCellTitle = styled('div')(({
     fontWeight: 600,
     fontSize: '22px',
     height: '44px',
+
+    ['@media (max-width: 1000px)']: {
+        fontSize: '20px'
+    }
 }))
 
 export const StyledServiceCellAbout = styled('div')(({
@@ -90,6 +128,13 @@ export const StyledServiceCellRight = styled('div')(() => ({
     display: 'flex',
     flexDirection: 'column',
     gap: '8px',
+
+    ['@media (max-width: 1000px)']: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        maxWidth: '100%',
+        minWidth: '100%',
+    }
 }))
 
 export const StyledServiceIconCell = styled('div')(() => ({

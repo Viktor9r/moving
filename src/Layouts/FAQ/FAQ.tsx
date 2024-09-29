@@ -8,12 +8,14 @@ import { ReactComponent as MinusIcon } from '../../resources/icons/minus.svg';
 import { useEffect, useState } from "react";
 import React from "react";
 import { TrustPageOptionsQuoteButton } from "../Trust/styled";
+import { useMediaQuery } from "@mui/material";
 
 interface IProps {
     questions: any
 }
 
 export const FAQPage: React.FC<IProps> = ({ questions }) => {
+    const mobile = useMediaQuery('(max-width:1000px)');
 
     const [showAnswer, setShowAnswer] = useState(false);
     const [openedIds, setOpenedIds] = useState<any>([])
@@ -44,10 +46,15 @@ export const FAQPage: React.FC<IProps> = ({ questions }) => {
                         Didn't find the answer to your quetion?
                         <br></br>
                         Call us or send us an e-mail
-                        <br></br>
-                        <StyledFAQPageTip>
-                            * Scroll to see more
-                        </StyledFAQPageTip>
+
+                        {!mobile && (
+                            <>
+                                <br></br>
+                                <StyledFAQPageTip>
+                                    * Scroll to see more
+                                </StyledFAQPageTip>
+                            </>
+                        )}
                     </StyledFAQPageSubTitle>
                 </StyledFAQPageTopLeft>
 
@@ -55,10 +62,15 @@ export const FAQPage: React.FC<IProps> = ({ questions }) => {
                     sx={{
                         justifyContent: 'space-between',
                         alignItems: 'flex-end',
-                        height: '100%'
+                        height: '100%',
+
+                        ['@media (max-width: 1000px)']: {
+                            alignItems: 'flex-start',
+                            flexDirection: 'column-reverse'
+                        }
                     }}
                 >
-                    <StyledFAQLink to={'/faq-page'}>Go to FAQ page</StyledFAQLink>
+                    <StyledFAQLink to={'/faq-page'} onClick={() => window.scrollTo({ top: 0 })}>Go to FAQ page</StyledFAQLink>
 
                     <StyledFAQPageTopRight>
                         <HeaderLink
@@ -76,21 +88,25 @@ export const FAQPage: React.FC<IProps> = ({ questions }) => {
                             </HeaderIcon>
                             info@fcmmovers.com
                         </HeaderLink>
-                        <HeaderPipe />
-                        <HeaderLink
-                            to='tel:6476414631'
-                        >
-                            <HeaderIcon sx={{
-                                mr: 1,
-                                mb: '1px',
-                                ['@media (max-height: 799px) and (min-width: 1024px)']: {
-                                    mr: 1
-                                }
-                            }}>
-                                <PhoneIphoneOutlined />
-                            </HeaderIcon>
-                            +1 (416) 450-5144
-                        </HeaderLink>
+                        {!mobile && (
+                            <>
+                                <HeaderPipe />
+                                <HeaderLink
+                                    to='tel:4378989777'
+                                >
+                                    <HeaderIcon sx={{
+                                        mr: 1,
+                                        mb: '1px',
+                                        ['@media (max-height: 799px) and (min-width: 1024px)']: {
+                                            mr: 1
+                                        }
+                                    }}>
+                                        <PhoneIphoneOutlined />
+                                    </HeaderIcon>
+                                    +1 (437) 898-9777
+                                </HeaderLink>
+                            </>
+                        )}
                     </StyledFAQPageTopRight>
                 </StyledFAQPageTopLeft>
             </StyledFAQPageTop>
@@ -104,11 +120,13 @@ export const FAQPage: React.FC<IProps> = ({ questions }) => {
                             key={item.id}
                         >
                             <StyledFAQPageCellLeft>
-                                <StyledFAQIconCell>
-                                    <StyledFAQIconCellNumber>
-                                        {index + 1}
-                                    </StyledFAQIconCellNumber>
-                                </StyledFAQIconCell>
+                                {!mobile && (
+                                    <StyledFAQIconCell>
+                                        <StyledFAQIconCellNumber>
+                                            {index + 1}
+                                        </StyledFAQIconCellNumber>
+                                    </StyledFAQIconCell>
+                                )}
 
                                 <StyledFAQCellTitle>
                                     {item.question}
@@ -140,6 +158,11 @@ export const FAQPage: React.FC<IProps> = ({ questions }) => {
                                         ['svg']: {
                                             fill: '#00302E',
                                         },
+                                    },
+
+                                    ['@media (max-width: 1000px)']: {
+                                        width: '44px',
+                                        height: '44px'
                                     }
                                 }}
                             >

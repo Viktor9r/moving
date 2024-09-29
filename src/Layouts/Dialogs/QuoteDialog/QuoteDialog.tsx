@@ -10,6 +10,7 @@ import { PhoneInput } from 'react-international-phone';
 import '../../MainPage/style.scss'
 import '../../MainPage/phoneStyles.scss'
 import { StyledFormSubmitButton } from "../../Form/styled";
+import { CalendarDialog } from "../CalendarDialog/CalendarDialog";
 
 interface IProps {
     open: any,
@@ -19,6 +20,7 @@ interface IProps {
 export const QuoteDialog: React.FC<IProps> = ({ open, onClose }) => {
     const [error, setError] = useState('');
     const [isSucces, setIsSuccess] = useState(false);
+    const [openCalendar, setOpenCalendar] = useState(false)
     const [formData, setFormData] = useState({
         zip12: '',
         zip22: '',
@@ -135,8 +137,8 @@ export const QuoteDialog: React.FC<IProps> = ({ open, onClose }) => {
                 >
                     <StyledMainPageFieldBlock
                         sx={{
-                            minWidth: 'calc(50% - 6px)',
-                            maxWidth: 'calc(50% - 6px)'
+                            minWidth: 'calc(50% - 6px) !important',
+                            maxWidth: 'calc(50% - 6px) !important'
                         }}
                     >
                         <StyledFieldBlockTitle htmlFor="zip13">
@@ -155,8 +157,8 @@ export const QuoteDialog: React.FC<IProps> = ({ open, onClose }) => {
 
                     <StyledMainPageFieldBlock
                         sx={{
-                            minWidth: 'calc(50% - 6px)',
-                            maxWidth: 'calc(50% - 6px)'
+                            minWidth: 'calc(50% - 6px) !important',
+                            maxWidth: 'calc(50% - 6px) !important'
                         }}
                     >
                         <StyledFieldBlockTitle htmlFor="zip23">
@@ -204,7 +206,14 @@ export const QuoteDialog: React.FC<IProps> = ({ open, onClose }) => {
                         Moving Date*
                     </StyledFieldBlockTitle>
 
-                    <DatePicker
+                    <StyledFieldBlockInput
+                        onClick={() => setOpenCalendar(true)}
+                        style={{ width: 'calc(100% - 14px)', padding: '4px 0 4px 14px' }}
+                        placeholder="Choose date"
+                        value={formData.date === null ? '' : formData.date}
+                    />
+
+                    {/* <DatePicker
                         date={formData.date || undefined}
                         onDateChange={handleDate}
                         locale={enUS}
@@ -218,7 +227,7 @@ export const QuoteDialog: React.FC<IProps> = ({ open, onClose }) => {
                                 placeholder="Choose date"
                             />
                         )}
-                    </DatePicker>
+                    </DatePicker> */}
                 </StyledMainPageFieldBlock>
 
                 <StyledFlexContainer>
@@ -323,6 +332,15 @@ export const QuoteDialog: React.FC<IProps> = ({ open, onClose }) => {
                     </Alert>
                 )}
             </Snackbar>
+
+            {openCalendar && (
+                <CalendarDialog
+                    open={openCalendar}
+                    onClose={() => setOpenCalendar(false)} // Corrected here
+                    date={formData.date}
+                    handleDate={handleDate}
+                />
+            )}
         </Dialog>
     )
 }

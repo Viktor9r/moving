@@ -3,6 +3,7 @@ import { StyledFAQPageQuestionsList, StyledFAQPageCell, StyledFAQPageCellTop, St
 import { ReactComponent as PlusIcon } from '../../resources/icons/plus.svg';
 import { ReactComponent as MinusIcon } from '../../resources/icons/minus.svg';
 import { StyledFAQCategory } from "./styled";
+import { useMediaQuery } from "@mui/material";
 
 interface IProps {
     questions: any,
@@ -11,6 +12,7 @@ interface IProps {
 
 export const QuestionsList: React.FC<IProps> = ({ questions, category }) => {
     const [openedIds, setOpenedIds] = useState<any>([])
+    const mobile = useMediaQuery('(max-width:1000px)');
 
     const addOpenedId = (newId: number) => {
         const newIds = [...openedIds, newId];
@@ -37,11 +39,13 @@ export const QuestionsList: React.FC<IProps> = ({ questions, category }) => {
                         key={item.id}
                     >
                         <StyledFAQPageCellLeft>
-                            <StyledFAQIconCell>
-                                <StyledFAQIconCellNumber>
-                                    {index + 1}
-                                </StyledFAQIconCellNumber>
-                            </StyledFAQIconCell>
+                            {!mobile && (
+                                <StyledFAQIconCell>
+                                    <StyledFAQIconCellNumber>
+                                        {index + 1}
+                                    </StyledFAQIconCellNumber>
+                                </StyledFAQIconCell>
+                            )}
 
                             <StyledFAQCellTitle>
                                 {item.question}
@@ -73,6 +77,11 @@ export const QuestionsList: React.FC<IProps> = ({ questions, category }) => {
                                     ['svg']: {
                                         fill: '#00302E',
                                     },
+                                },
+
+                                ['@media (max-width: 1000px)']: {
+                                    width: '44px',
+                                    height: '44px'
                                 }
                             }}
                         >

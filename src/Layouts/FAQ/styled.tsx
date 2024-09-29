@@ -12,7 +12,13 @@ export const StyledFAQPage = styled('div')(() => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-evenly',
-    gap: '40px'
+    gap: '40px',
+
+    ['@media (max-width: 1000px)']: {
+        height: 'fit-content',
+        padding: '30px 16px 16px',
+        gap: '24px'
+    }
 }))
 
 export const StyledFAQPageTop = styled('div')(() => ({
@@ -22,7 +28,13 @@ export const StyledFAQPageTop = styled('div')(() => ({
     width: '100%',
     margin: '0 auto',
     justifyContent: 'space-between',
-    alignItems: 'flex-end'
+    alignItems: 'flex-end',
+
+    ['@media (max-width: 1000px)']: {
+        flexDirection: 'column',
+        alignItems: 'flex-start',
+        gap: '24px'
+    }
 }))
 
 export const StyledFAQPageTopLeft = styled('div')(() => ({
@@ -35,6 +47,10 @@ export const StyledFAQPageTitle = styled('div')(() => ({
     color: '#000',
     fontWeight: 600,
     fontSize: '44px',
+
+    ['@media (max-width: 1000px)']: {
+        fontSize: '32px'
+    }
 }))
 
 export const StyledFAQPageSubTitle = styled('div')(() => ({
@@ -52,7 +68,11 @@ export const StyledFAQPageTip = styled('div')(() => ({
 export const StyledFAQPageTopRight = styled('div')(() => ({
     display: 'flex',
     gap: '24px',
-    alignItems: 'center'
+    alignItems: 'center',
+
+    ['@media (max-width: 1000px)']: {
+        flexDirection: 'column'
+    }
 }))
 
 export const StyledFAQPageQuestionsList = styled('div')(() => ({
@@ -73,7 +93,12 @@ export const StyledFAQPageCell = styled('div')(() => ({
     background: '#fff',
     borderRadius: '20px',
     transition: '0.3s',
-    gap: '24px'
+    gap: '24px',
+    
+    ['@media (max-width: 1000px)']: {
+        padding: '14px',
+        borderRadius: '30px',
+    }
 }))
 
 export const StyledFAQPageCellTop = styled('div')(() => ({
@@ -117,13 +142,22 @@ export const StyledFAQCellTitle = styled('div')(() => ({
     color: '#000',
     fontWeight: 600,
     fontSize: '24px',
+
+    ['@media (max-width: 1000px)']: {
+        fontSize: '16px'
+    }
 }))
 
 export const StyledFAQCellAnswer = styled('div')(() => ({
     color: '#000',
     fontSize: '17px',
     fontWeight: 500,
-    marginLeft: '78px'
+    marginLeft: '78px',
+
+    ['@media (max-width: 1000px)']: {
+        marginLeft: 0,
+        fontSize: '14px'
+    }
 }))
 
 export const StyledFAQLink = styled(Link)(() => ({
@@ -146,5 +180,9 @@ export const StyledFAQLink = styled(Link)(() => ({
     [':hover']: {
         background: '#e3e3e3',
         color: '#00302E',
+    },
+
+    ['@media (max-width: 1000px)']: {
+        height: '50px',
     }
 }))

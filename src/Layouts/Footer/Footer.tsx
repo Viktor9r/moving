@@ -1,25 +1,45 @@
 import { KeyboardArrowUp } from "@mui/icons-material"
-import { StyledFooter, StyledFooterColumn, StyledFooterColumnContent, StyledFooterColumnFlexRow, StyledFooterColumnGreyText, StyledFooterColumnService, StyledFooterColumnTitle, StyledFooterContent, StyledFooterIconCell } from "./styled"
+import { StyledFooter, StyledFooterColumn, StyledFooterColumnContent, StyledFooterColumnFlexRow, StyledFooterColumnGreyText, StyledFooterColumnService, StyledFooterColumnTitle, StyledFooterContent, StyledFooterIconCell, StyletMobileFooterLogo } from "./styled"
 import { HeaderLink, HeaderIcon, HeaderPipe } from "../AppHeader/styled";
 import EmailIcon from '@mui/icons-material/EmailOutlined';
 import { PhoneIphoneOutlined, PhoneOutlined } from "@mui/icons-material";
+import { useMediaQuery } from "@mui/material";
+import logo from '../../resources/images/finallogo.png'
 
 interface IProps {
     servicesList: any
 }
 
 export const Footer: React.FC<IProps> = ({ servicesList }) => {
+    const mobile = useMediaQuery('(max-width:1000px)');
+
     return (
         <StyledFooter>
             <StyledFooterContent>
+                {mobile && (
+                    <StyledFooterColumn
+                        sx={{
+                            ['@media (max-width: 1000px)']: {
+                                gridColumn: '1/13',
+                                alignItems: 'center'
+                            }
+                        }}
+                    >
+                        <StyletMobileFooterLogo src={logo} />
+                    </StyledFooterColumn>
+                )}
                 <StyledFooterColumn
                     sx={{
                         gridColumn: '1/4',
-                        height: '100%'
+                        height: '100%',
+
+                        ['@media (max-width: 1000px)']: {
+                            gridColumn: '1/13',
+                        }
                     }}
                 >
                     <StyledFooterColumnTitle>
-                        First Class Moving
+                        First Class Movers
                     </StyledFooterColumnTitle>
 
                     <StyledFooterColumnContent
@@ -28,14 +48,18 @@ export const Footer: React.FC<IProps> = ({ servicesList }) => {
                         }}
                     >
                         <StyledFooterColumnGreyText>
-                            Copyright © First Class Moving
+                            Copyright © First Class Movers
                         </StyledFooterColumnGreyText>
                     </StyledFooterColumnContent>
                 </StyledFooterColumn>
 
                 <StyledFooterColumn
                     sx={{
-                        gridColumn: '4/7'
+                        gridColumn: '4/7',
+
+                        ['@media (max-width: 1000px)']: {
+                            gridColumn: '1/13',
+                        }
                     }}
                 >
                     <StyledFooterColumnTitle>
@@ -67,13 +91,21 @@ export const Footer: React.FC<IProps> = ({ servicesList }) => {
 
                 <StyledFooterColumn
                     sx={{
-                        gridColumn: '7/8'
+                        gridColumn: '7/8',
+
+                        ['@media (max-width: 1000px)']: {
+                            display: 'none'
+                        }
                     }}
                 />
 
                 <StyledFooterColumn
                     sx={{
-                        gridColumn: '8/13'
+                        gridColumn: '8/13',
+
+                        ['@media (max-width: 1000px)']: {
+                            gridColumn: '1/13',
+                        }
                     }}
                 >
                     <StyledFooterColumnTitle>
@@ -87,7 +119,13 @@ export const Footer: React.FC<IProps> = ({ servicesList }) => {
 
                         <StyledFooterColumnFlexRow
                             sx={{
-                                mt: 2
+                                mt: 2,
+                                ['@media (max-width: 1000px)']: {
+                                    mt: 1,
+                                    flexDirection: 'column',
+                                    alignItems: 'flex-start',
+                                    gap: '14px'
+                                }
                             }}
                         >
                             <HeaderLink
@@ -105,9 +143,11 @@ export const Footer: React.FC<IProps> = ({ servicesList }) => {
                                 </HeaderIcon>
                                 info@fcmmovers.com
                             </HeaderLink>
-                            <HeaderPipe sx={{ margin: '0 6px' }} />
+                            {!mobile && (
+                                <HeaderPipe sx={{ margin: '0 6px' }} />
+                            )}
                             <HeaderLink
-                                to='tel:6476414631'
+                                to='tel:4378989777'
                             >
                                 <HeaderIcon sx={{
                                     mr: 1,
@@ -118,15 +158,17 @@ export const Footer: React.FC<IProps> = ({ servicesList }) => {
                                 }}>
                                     <PhoneIphoneOutlined />
                                 </HeaderIcon>
-                                +1(416)450-5144
+                                +1(437)898-9777
                             </HeaderLink>
                         </StyledFooterColumnFlexRow>
                     </StyledFooterColumnContent>
                 </StyledFooterColumn>
 
-                <StyledFooterIconCell onClick={() => window.scrollTo({ top: 0 })}>
-                    <KeyboardArrowUp />
-                </StyledFooterIconCell>
+                {!mobile && (
+                    <StyledFooterIconCell onClick={() => window.scrollTo({ top: 0 })}>
+                        <KeyboardArrowUp />
+                    </StyledFooterIconCell>
+                )}
             </StyledFooterContent>
         </StyledFooter>
     )

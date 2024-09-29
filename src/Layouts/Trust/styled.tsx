@@ -12,7 +12,13 @@ export const StyledTrustPage = styled('div')(() => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-evenly',
-    gap: '40px'
+    gap: '40px',
+
+    ['@media (max-width: 1000px)']: {
+        // height: "fit-content",
+        height: 'fit-content',
+        padding: '30px 16px 16px'
+    }
 }))
 
 export const StyledTrustPageTop = styled('div')(() => ({
@@ -29,7 +35,13 @@ export const StyledTrustPageTitle = styled('div')(() => ({
     color: '#000',
     fontWeight: 600,
     fontSize: '44px',
-    maxWidth: '50%'
+    maxWidth: '50%',
+
+    ['@media (max-width: 1000px)']: {
+        // height: "fit-content",
+        maxWidth: '100%',
+        fontSize: '32px'
+    }
 }))
 
 export const StyledTrustPageTopUnder = styled('div')(() => ({
@@ -44,7 +56,12 @@ export const StyledTrustPageSubTitle = styled('div')(() => ({
     color: '#000',
     fontSize: '14px',
     fontWeight: 500,
-    maxWidth: '60%'
+    maxWidth: '60%',
+
+    ['@media (max-width: 1000px)']: {
+        // height: "fit-content",
+        maxWidth: '100%',
+    }
 }));
 
 export const TrustPageOptionsQuoteButton = styled(Button)(() => ({
@@ -73,7 +90,13 @@ export const StyledTrustPageList = styled('div')(() => ({
     borderRadius: '20px',
     background: '#fff',
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
+
+    ['@media (max-width: 1000px)']: {
+        // height: "fit-content",
+        flexWrap: 'wrap',
+        borderRadius: '30px',
+    }
 }))
 
 export const StyledTrustPageCell = styled('div')(() => ({
@@ -85,6 +108,16 @@ export const StyledTrustPageCell = styled('div')(() => ({
     borderRight: '2px solid #e3e3e3',
     margin: '20px 0',
     padding: '0 20px',
+
+    ['@media (max-width: 1000px)']: {
+        // height: "fit-content",
+        width: 'calc(50% - 42px)',
+        borderBottom: '2px solid #e3e3e3',
+        margin: 0,
+        padding: '20px',
+        alignItems: 'center',
+        textAlign: 'center'
+    }
 }));
 
 export const StyledTrustPageCellTitle = styled('div')(() => ({
@@ -92,7 +125,12 @@ export const StyledTrustPageCellTitle = styled('div')(() => ({
     fontSize: '14px',
     lineHeight: '1.25',
     textTransform: 'capitalize',
-    height: '42px'
+    height: '42px',
+
+    ['@media (max-width: 1000px)']: {
+        // height: "fit-content",
+        fontSize: '12px',
+    }
 }))
 
 export const StyledTrustIconCell = styled('div')(() => ({
