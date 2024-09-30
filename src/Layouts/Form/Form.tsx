@@ -232,6 +232,7 @@ export const FormPage: React.FC = () => {
                                     placeholder="Choose date"
                                     onClick={() => setOpenCalendar(true)}
                                     value={formData.date === null ? '' : format(formData.date, 'dd MMM, yyyy')}
+                                    onChange={() => {}}
                                     sx={{
                                         height: '40px',
                                     }}
