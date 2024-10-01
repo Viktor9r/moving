@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import logo from './logo.svg';
+import  { useEffect } from 'react';
 import './App.css';
 import { DesktopLayout } from './Layouts/DesktopLayout/DesktopLayout';
 import { Route, Routes, useLocation } from 'react-router-dom';
@@ -35,7 +34,7 @@ function App() {
     if (location.pathname.includes('packing')) {
       setVisibleService(servicesList[5].id)
     }
-  }, [location]);
+  }, [location, setVisibleService]);
 
   const { openQuoteDialog, setOpenQuoteDialog } = useOpenQuoteDialog()
 

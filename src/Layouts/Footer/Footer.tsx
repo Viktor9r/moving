@@ -130,7 +130,7 @@ export const Footer: React.FC<IProps> = ({ servicesList }) => {
                         >
                             <HeaderLink
                                 onClick={() => window.location.href = 'mailto:info@fcmmovers.com'}
-                                to='javascript:void(0)'
+                                to=''
                             >
                                 <HeaderIcon sx={{
                                     mr: 1,

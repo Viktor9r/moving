@@ -122,7 +122,7 @@ export const FormPage: React.FC = () => {
 
                             <StyledFormPageBottomLeftContact
                                 onClick={() => window.location.href = 'mailto:info@fcmmovers.com'}
-                                to='javascript:void(0)'
+                                to=''
                             >
                                 info@fcmmovers.com
                             </StyledFormPageBottomLeftContact>

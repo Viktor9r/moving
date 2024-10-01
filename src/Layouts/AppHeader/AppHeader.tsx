@@ -160,12 +160,12 @@ export const AppHeader: React.FC<IProps> = () => {
                         fontSize: '18px !important',
                         marginBottom: '30px',
 
-                        ['svg']: {
-                            fill: '#fff'
-                        }
+                        // ['svg']: {
+                        //     fill: '#fff'
+                        // }
                     }}
                     onClick={() => window.location.href = 'mailto:info@fcmmovers.com'}
-                    to='javascript:void(0)'
+                    to=''
                 >
                     <HeaderIcon sx={{
                         mr: 1,
