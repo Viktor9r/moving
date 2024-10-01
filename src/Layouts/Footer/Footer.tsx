@@ -2,7 +2,7 @@ import { KeyboardArrowUp } from "@mui/icons-material"
 import { StyledFooter, StyledFooterColumn, StyledFooterColumnContent, StyledFooterColumnFlexRow, StyledFooterColumnGreyText, StyledFooterColumnService, StyledFooterColumnTitle, StyledFooterContent, StyledFooterIconCell, StyletMobileFooterLogo } from "./styled"
 import { HeaderLink, HeaderIcon, HeaderPipe } from "../AppHeader/styled";
 import EmailIcon from '@mui/icons-material/EmailOutlined';
-import { PhoneIphoneOutlined, PhoneOutlined } from "@mui/icons-material";
+import { PhoneIphoneOutlined } from "@mui/icons-material";
 import { useMediaQuery } from "@mui/material";
 import logo from '../../resources/images/finallogo.png'
 

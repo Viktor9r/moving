@@ -4,8 +4,6 @@ import { useState } from "react";
 import { StyledDialogForm, StyledDialogTitle, StyledDialogTop, StyledFlexContainer } from "./styled";
 import { CloseRounded } from "@mui/icons-material";
 import { StyledFieldBlockInput, StyledFieldBlockTextArea, StyledFieldBlockTitle, StyledMainPageFieldBlock } from "../../MainPage/styled";
-import { DatePicker } from "react-nice-dates";
-import { enUS } from "date-fns/locale";
 import { PhoneInput } from 'react-international-phone';
 import '../../MainPage/style.scss'
 import '../../MainPage/phoneStyles.scss'

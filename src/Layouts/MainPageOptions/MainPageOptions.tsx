@@ -1,7 +1,6 @@
-import { Link, useLocation } from "react-router-dom"
-import { MainPageOptionsList, MainPageOptionsListItem, MainPageOptionsQuoteButton, StyledMainPageOptions } from "./styled"
+import {  useLocation } from "react-router-dom"
+import { MainPageOptionsList, MainPageOptionsListItem, StyledMainPageOptions } from "./styled"
 import { servicesList } from "../../resources/data/arrays"
-import { useSerivcePageDataStorage } from "../../Storages/useServicePageDataStorage"
 import { useOpenQuoteDialog } from "../../Storages/useOpenQuoteDialog"
 
 export const MainPageOptions: React.FC = () => {

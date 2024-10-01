@@ -1,13 +1,12 @@
 import { HeaderIcon, HeaderLink, HeaderPipe } from "../AppHeader/styled"
 import { StyledFAQCellTitle, StyledFAQIconCell, StyledFAQIconCellNumber, StyledFAQPage, StyledFAQPageCellTop, StyledFAQPageCellLeft, StyledFAQPageQuestionsList, StyledFAQPageSubTitle, StyledFAQPageTip, StyledFAQPageTitle, StyledFAQPageTop, StyledFAQPageTopLeft, StyledFAQPageTopRight, StyledFAQPageCell, StyledFAQCellAnswer, StyledFAQLink } from "./styled"
-import { PhoneIphoneOutlined, PhoneOutlined } from "@mui/icons-material";
+import { PhoneIphoneOutlined } from "@mui/icons-material";
 import EmailIcon from '@mui/icons-material/EmailOutlined';
 import { ReactComponent as PlusIcon } from '../../resources/icons/plus.svg';
 import { ReactComponent as MinusIcon } from '../../resources/icons/minus.svg';
 
 import { useEffect, useState } from "react";
 import React from "react";
-import { TrustPageOptionsQuoteButton } from "../Trust/styled";
 import { useMediaQuery } from "@mui/material";
 
 interface IProps {

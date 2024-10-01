@@ -170,9 +170,6 @@ export const AppHeader: React.FC<IProps> = () => {
                     <HeaderIcon sx={{
                         mr: 1,
                         mb: '1px',
-                        ['@media (max-height: 799px) and (min-width: 1024px)']: {
-                            mr: 1
-                        }
                     }}>
                         <EmailIcon />
                     </HeaderIcon>
@@ -184,19 +181,12 @@ export const AppHeader: React.FC<IProps> = () => {
                         color: '#fff',
                         fontSize: '18px !important',
                         marginBottom: '50px',
-
-                        ['svg']: {
-                            fill: '#fff'
-                        }
                     }}
                     to='tel:4378989777'
                 >
                     <HeaderIcon sx={{
                         mr: 1,
                         mb: '1px',
-                        ['@media (max-height: 799px) and (min-width: 1024px)']: {
-                            mr: 1
-                        }
                     }}>
                         <PhoneIphoneOutlined />
                     </HeaderIcon>
@@ -207,11 +197,6 @@ export const AppHeader: React.FC<IProps> = () => {
                     sx={{
                         color: '#fff',
                         border: '2px solid #fff',
-
-                        [':hover']: {
-                            background: '#fff',
-                            color: '#00302E'
-                        }
                     }}
                     onClick={() => {
                         setShowMobileMenu(false)

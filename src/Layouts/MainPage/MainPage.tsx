@@ -1,7 +1,5 @@
 import { useState } from "react";
-import { AppInnerContainer } from "../DesktopLayout/styled";
 import {
-    StyledCalendarButton,
     StyledFieldBlockInput,
     StyledFieldBlockTextArea,
     StyledFieldBlockTitle,
@@ -15,9 +13,7 @@ import {
     StyledMainPageTitle,
     StyledMainPageTop
 } from "./styled";
-import { DatePicker } from 'react-nice-dates';
 import { format } from "date-fns";
-import { enUS } from 'date-fns/locale';
 import { PhoneInput } from 'react-international-phone';
 import './phoneStyles.scss';
 import './style.scss';

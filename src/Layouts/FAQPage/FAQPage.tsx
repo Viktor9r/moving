@@ -1,12 +1,12 @@
 import { AppOuterContainer } from "../DesktopLayout/styled"
 import { MainPageOptions } from "../MainPageOptions/MainPageOptions"
-import { StyledFAQCategory, StyledFAQPageMain } from "./styled"
+import { StyledFAQPageMain } from "./styled"
 import background from '../../resources/images/background.png'
 import { StyledServicePageTop, StyledServicePageTitle, StyledServicePageSubTitle, StyledServicePageTopButton } from "../ServicePage/styled"
 import { useOpenQuoteDialog } from "../../Storages/useOpenQuoteDialog"
 import { HeaderIcon, HeaderLink, HeaderPipe } from "../AppHeader/styled"
-import { StyledFAQCellTitle, StyledFAQIconCell, StyledFAQIconCellNumber, StyledFAQPage, StyledFAQPageCellTop, StyledFAQPageCellLeft, StyledFAQPageQuestionsList, StyledFAQPageSubTitle, StyledFAQPageTip, StyledFAQPageTitle, StyledFAQPageTop, StyledFAQPageTopLeft, StyledFAQPageTopRight, StyledFAQPageCell, StyledFAQCellAnswer, StyledFAQLink } from "../FAQ/styled"
-import { PhoneIphoneOutlined, PhoneOutlined } from "@mui/icons-material";
+import { StyledFAQPage, StyledFAQPageSubTitle, StyledFAQPageTip, StyledFAQPageTitle, StyledFAQPageTop, StyledFAQPageTopLeft, StyledFAQPageTopRight } from "../FAQ/styled"
+import { PhoneIphoneOutlined } from "@mui/icons-material";
 import EmailIcon from '@mui/icons-material/EmailOutlined';
 
 import { useEffect, useState } from "react";
@@ -27,18 +27,6 @@ export const FAQPage: React.FC = () => {
     const questionsArr = questionsList;
 
     const [openedIds, setOpenedIds] = useState<any>([])
-
-    const addOpenedId = (newId: number) => {
-        const newIds = [...openedIds, newId];
-
-        setOpenedIds(newIds);
-    }
-
-    const removeOpenedId = (removeId: number) => {
-        const newIds = openedIds.filter((id: number) => id != removeId)
-
-        setOpenedIds(newIds);
-    }
 
     useEffect(() => { }, [setOpenedIds])
 

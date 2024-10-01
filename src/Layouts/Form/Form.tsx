@@ -2,8 +2,6 @@ import { useState } from "react";
 import { StyledFieldBlockInput, StyledFieldBlockTextArea, StyledFieldBlockTitle, StyledMainPageFieldBlock } from "../MainPage/styled"
 import { StyledFormInputsFirstLine, StyledFormInputsFirstLineLeft, StyledFormPage, StyledFormPageBottom, StyledFormPageBottomLeft, StyledFormPageBottomLeftBottom, StyledFormPageBottomLeftBottomBlock, StyledFormPageBottomLeftContact, StyledFormPageBottomLeftTitle, StyledFormPageBottomRight, StyledFormPageBottomTitle, StyledFormPageFieldsWrap, StyledFormPageTitle, StyledFormPageTop, StyledFormSubmitButton } from "./styled"
 import { format } from "date-fns";
-import { enUS } from "date-fns/locale";
-import { DatePicker } from "react-nice-dates";
 import '../MainPage/style.scss'
 import { PhoneInput } from 'react-international-phone';
 import '../MainPage/phoneStyles.scss'

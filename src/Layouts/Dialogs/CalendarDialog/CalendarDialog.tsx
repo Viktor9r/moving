@@ -2,7 +2,6 @@ import { Dialog } from "@mui/material";
 import { enUS } from "date-fns/locale";
 import { DatePickerCalendar } from "react-nice-dates";
 import "react-nice-dates/build/style.css"; // Ensure styles are loaded
-import { StyledFieldBlockInput } from "../../MainPage/styled";
 import "../../MainPage/style.scss";
 
 interface IProps {
