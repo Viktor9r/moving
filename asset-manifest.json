@@ -1,22 +1,24 @@
 {
   "files": {
     "main.css": "/static/css/main.bf99e979.css",
-    "main.js": "/static/js/main.8e7cc2ed.js",
+    "main.js": "/static/js/main.4f0dbc0a.js",
+    "static/js/937.3313bb41.chunk.js": "/static/js/937.3313bb41.chunk.js",
+    "static/js/777.008ddd64.chunk.js": "/static/js/777.008ddd64.chunk.js",
     "static/js/453.2d6f3480.chunk.js": "/static/js/453.2d6f3480.chunk.js",
-    "static/media/background.png": "/static/media/background.df0d07fd8580fec69275.png",
-    "static/media/piano222.png": "/static/media/piano222.aab525906220c5f1d128.png",
-    "static/media/local1.jpg": "/static/media/local1.bde66b7649bad43c95ba.jpg",
-    "static/media/commerce2.jpg": "/static/media/commerce2.5a30a1768b5509f912c2.jpg",
-    "static/media/commerce1.jpg": "/static/media/commerce1.d93ff72a3f451debdae3.jpg",
-    "static/media/finallogo.png": "/static/media/finallogo.483212cf86075c1205d2.png",
-    "static/media/greentruck.png": "/static/media/greentruck.bf24df4c3a72bf1f467c.png",
+    "static/media/truckkkk.png": "/static/media/truckkkk.7ac4e74f502b53ddf812.png",
+    "static/media/piano222.png": "/static/media/piano222.85bf79c0c1039df939fc.png",
     "static/media/storage22.jpeg": "/static/media/storage22.cdf313900b423ac27709.jpeg",
-    "static/media/storage1.jpg": "/static/media/storage1.27fa440262ae7a8be1e8.jpg",
+    "static/media/commerce2.jpg": "/static/media/commerce2.d4b2a4569b146709bafe.jpg",
+    "static/media/storage1.jpg": "/static/media/storage1.58203b33aa79cc0ac396.jpg",
     "static/media/piano12.png": "/static/media/piano12.1aac7c47ada460eb760c.png",
     "static/media/packing22.jpg": "/static/media/packing22.1f45d1d04fc1d0ad785b.jpg",
     "static/media/packing1.jpg": "/static/media/packing1.75873c5636a4e17476ed.jpg",
-    "static/media/long-distance2.jpg": "/static/media/long-distance2.580a3a482216afe5302e.jpg",
+    "static/media/commerce1.jpg": "/static/media/commerce1.6d51d79048c011bef460.jpg",
+    "static/media/long-distance2.jpg": "/static/media/long-distance2.09defee5f924d12473c0.jpg",
+    "static/media/local1.jpg": "/static/media/local1.f4a8e4c173d64705e0e2.jpg",
+    "static/media/finallogo.png": "/static/media/finallogo.7f0e313c1baff95b30b0.png",
     "static/media/local22.jpg": "/static/media/local22.13213d0e772b22cc8edd.jpg",
+    "static/media/greentruck.png": "/static/media/greentruck.247e97b4d560425d6760.png",
     "static/media/long-distance.jpg": "/static/media/long-distance.a34577a7b7552dce43aa.jpg",
     "static/media/efficiency.svg": "/static/media/efficiency.6c44fb977278095a73be72e8f861cc1a.svg",
     "static/media/schedule.svg": "/static/media/schedule.dce54814b6f29f9b2c175ff48a840c05.svg",
@@ -53,11 +55,13 @@
     "static/media/minus.svg": "/static/media/minus.86a6081d4583e175c50599e8c26c4fa6.svg",
     "static/media/plus.svg": "/static/media/plus.f6e63d927dbdae1508e049b1e90c2604.svg",
     "main.bf99e979.css.map": "/static/css/main.bf99e979.css.map",
-    "main.8e7cc2ed.js.map": "/static/js/main.8e7cc2ed.js.map",
+    "main.4f0dbc0a.js.map": "/static/js/main.4f0dbc0a.js.map",
+    "937.3313bb41.chunk.js.map": "/static/js/937.3313bb41.chunk.js.map",
+    "777.008ddd64.chunk.js.map": "/static/js/777.008ddd64.chunk.js.map",
     "453.2d6f3480.chunk.js.map": "/static/js/453.2d6f3480.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bf99e979.css",
-    "static/js/main.8e7cc2ed.js"
+    "static/js/main.4f0dbc0a.js"
   ]
 }

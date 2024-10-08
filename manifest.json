@@ -1,7 +1,7 @@
 {
   "name": "Moving",
   "short_name": "Moving",
-  "description": "A moving company web application.",
+  "description": "The First-Class Experience in Moving!",
   "start_url": "/moving/",
   "display": "standalone",
   "background_color": "#ffffff",
