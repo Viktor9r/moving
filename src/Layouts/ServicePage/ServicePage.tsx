@@ -13,7 +13,7 @@ import { StyledServicePageMain, StyledServicePageAbout, StyledServicePageSubTitl
 import { useMediaQuery } from "@mui/material";
 import { MobileBottomBar } from "../MobileBottomBar/MobileBottomBar";
 
-const ServicePage: React.FC = () => {
+export const ServicePage: React.FC = () => {
 
     const mobile = useMediaQuery('(max-width:1000px)');
 
@@ -120,5 +120,3 @@ const ServicePage: React.FC = () => {
 
     return <></>
 }
-
-export default ServicePage;

@@ -1,15 +1,14 @@
-import  { lazy, useEffect } from 'react';
+import  { useEffect } from 'react';
 import './App.css';
 import { DesktopLayout } from './Layouts/DesktopLayout/DesktopLayout';
 import { Route, Routes, useLocation } from 'react-router-dom';
+import { ServicePage } from './Layouts/ServicePage/ServicePage';
+import { AppHeader } from './Layouts/AppHeader/AppHeader';
 import { useSerivcePageDataStorage } from './Storages/useServicePageDataStorage';
 import { servicesList } from './resources/data/arrays';
 import { useOpenQuoteDialog } from './Storages/useOpenQuoteDialog';
 import { QuoteDialog } from './Layouts/Dialogs/QuoteDialog/QuoteDialog';
 import { FAQPage } from './Layouts/FAQPage/FAQPage';
-
-const ServicePage = lazy(() => import('./Layouts/ServicePage/ServicePage'));
-const AppHeader = lazy(() => import('./Layouts/AppHeader/AppHeader'));
 
 function App() {
   const location = useLocation()
