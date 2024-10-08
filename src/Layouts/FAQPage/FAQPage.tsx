@@ -1,7 +1,7 @@
 import { AppOuterContainer } from "../DesktopLayout/styled"
 import { MainPageOptions } from "../MainPageOptions/MainPageOptions"
 import { StyledFAQPageMain } from "./styled"
-import background from '../../resources/images/background.png'
+import background from '../../resources/images/truckkkk.png'
 import { StyledServicePageTop, StyledServicePageTitle, StyledServicePageSubTitle, StyledServicePageTopButton } from "../ServicePage/styled"
 import { useOpenQuoteDialog } from "../../Storages/useOpenQuoteDialog"
 import { HeaderIcon, HeaderLink, HeaderPipe } from "../AppHeader/styled"

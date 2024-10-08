@@ -1,5 +1,5 @@
 import { Button, styled } from "@mui/material";
-import background from '../../resources/images/background.png';
+import background from '../../resources/images/truckkkk.png';
 
 export const StyledMainPage = styled('div')(() => ({
     margin: '0 auto',

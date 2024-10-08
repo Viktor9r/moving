@@ -27,7 +27,7 @@ import { useLocation } from "react-router-dom";
 
 interface IProps { }
 
-export const AppHeader: React.FC<IProps> = () => {
+const AppHeader: React.FC<IProps> = () => {
     const { setOpenQuoteDialog } = useOpenQuoteDialog();
     const mobile = useMediaQuery("(max-width:1000px)");
     const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -209,3 +209,5 @@ export const AppHeader: React.FC<IProps> = () => {
         </>
     );
 };
+
+export default AppHeader;
