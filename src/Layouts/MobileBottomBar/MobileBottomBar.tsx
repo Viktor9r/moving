@@ -30,8 +30,8 @@ export const MobileBottomBar: React.FC = () => {
     return (
         <MobileBottomContainer
             sx={{
-                display: location.pathname !== '/' ? 'flex' : topScrollValue > 0 && topScrollValue < window.innerHeight + 70 ? 'none' : 'flex',
-                bottom: topScrollValue > 0 ? 10 : 30
+                // display: location.pathname !== '/' ? 'flex' : topScrollValue > 0 && topScrollValue < window.innerHeight + 70 ? 'none' : 'flex',
+                bottom: topScrollValue > 0 ? 10 : 14
             }}
         >
             <MobileBottomButton
