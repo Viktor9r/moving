@@ -36,15 +36,7 @@ export const MobileBottomBar: React.FC = () => {
         >
             <MobileBottomButton
                 onClick={() => {
-                    if (topScrollValue === 0) {
-                        if (location.pathname === '/') {
-                            window.scrollTo({ top: window.innerHeight - 70 })
-                        } else (
-                            setOpenQuoteDialog(true)
-                        )
-                    } else {
-                        setOpenQuoteDialog(true)
-                    }
+                    setOpenQuoteDialog(true)
                 }}
                 sx={{
                     borderTopLeftRadius: topScrollValue > 0 ? '20px' : 0,

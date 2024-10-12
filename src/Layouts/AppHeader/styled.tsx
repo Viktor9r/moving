@@ -1,7 +1,7 @@
 import { styled } from "@mui/material";
 import { Link } from "react-router-dom";
 
-export const HeaderOuterContainer = styled('div')(() => ({
+export const HeaderOuterContainer = styled('header')(() => ({
     position: 'fixed',
     top: 0,
     left: 0,
