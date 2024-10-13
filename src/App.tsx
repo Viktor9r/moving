@@ -19,16 +19,16 @@ function App() {
     if (location.pathname.includes('long-distance')) {
       setVisibleService(servicesList[0].id)
     }
-    if (location.pathname.includes('local-moving')) {
+    if (location.pathname.includes('toronto-local-moving')) {
       setVisibleService(servicesList[1].id)
     }
-    if (location.pathname.includes('storage-moving')) {
+    if (location.pathname.includes('toronto-storage-moving')) {
       setVisibleService(servicesList[2].id)
     }
-    if (location.pathname.includes('commercial-moving')) {
+    if (location.pathname.includes('toronto-commercial-moving')) {
       setVisibleService(servicesList[3].id)
     }
-    if (location.pathname.includes('special-moving')) {
+    if (location.pathname.includes('toronto-special-items-moving')) {
       setVisibleService(servicesList[4].id)
     }
     if (location.pathname.includes('packing')) {
@@ -46,37 +46,37 @@ function App() {
         <Route path='/faq-page' element={<FAQPage />} />
         <Route
           path={
-            '/services/long-distance-moving'
+            '/services/toronto-long-distance-moving'
           }
           element={<ServicePage />}
         />
         <Route
           path={
-            '/services/local-moving'
+            '/services/toronto-local-moving'
           }
           element={<ServicePage />}
         />
         <Route
           path={
-            '/services/storage-moving'
+            '/services/toronto-storage-moving'
           }
           element={<ServicePage />}
         />
         <Route
           path={
-            '/services/commercial-moving'
+            '/services/toronto-commercial-moving'
           }
           element={<ServicePage />}
         />
         <Route
           path={
-            '/services/special-moving'
+            '/services/toronto-special-items-moving'
           }
           element={<ServicePage />}
         />
         <Route
           path={
-            '/services/packing-moving'
+            '/services/toronto-packing-service'
           }
           element={<ServicePage />}
         />

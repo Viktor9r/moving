@@ -50,7 +50,7 @@ export const servicesList = [
         title: 'Long distance moving',
         icon: <LongIcon />,
         about: 'When moving to a new province or city, you want all your treasured belongings to arrive safely with you.\n \n 1. Consolidated Shipping:\n   • If you have flexible timing and a tight budget, Consolidated Shipping is a cost - effective choice.\n • Your items are securely labeled and tracked, sharing a truck with other clients.\n • You’ll need to be available during the delivery window.\n • This option offers all the benefits of shipping your possessions to your new location at a lower price.\n \n 2. Exclusive Express Long - Distance Moving:\n • If you’re on a tight schedule and want full control over delivery dates, our Exclusive Express Service is ideal.\n • We dedicate an entire truck exclusively for your shipment.\n • You can choose your preferred pick - up and drop - off dates with direct delivery.',
-        link: '/services/long-distance-moving',
+        link: '/services/toronto-long-distance-moving',
         subTitle: 'Move to any province of Canada with us',
         subTitle2: 'Cross - country moving options on time and within budget.',
         gallery: [
@@ -95,7 +95,7 @@ export const servicesList = [
         title: 'Local moving',
         icon: <LocalIcon />,
         about: 'There are surprisingly a lot of details required in planning a successful relocation in Toronto & GTA area. Let us manage them for you.\n\n Providing hassle-free local moves in Toronto and the GTA is our core business.\n\n When moving in here, it’s important to have professionals who excel in thorough planning, clear communication, and efficient processes. With experts like these by your side, the entire experience becomes smoother.\n\nLet us be your ally in your new beginning!',
-        link: '/services/local-moving',
+        link: '/services/toronto-local-moving',
         subTitle: 'Wherever you are moving, we are your local GTA moving experts',
         subTitle2: 'Trusted by Torontonians to move them quickly and safely',
         gallery: [
@@ -140,7 +140,7 @@ export const servicesList = [
         title: 'Storage',
         icon: <StorageIcon />,
         about: 'We offer affordable and reliable storage across Toronto & GTA. Close to your new home!\n\nDeclutter the space in you home with our on-demand storage service.\n\nWe handle everything for you.\n\nWe’ll pick up your items, store them securely in our partner’s facility, and bring them back whenever you need them. It’s that simple!\n\nNo heavy lifting — just more space and peace of mind.',
-        link: '/services/storage-moving',
+        link: '/services/toronto-storage-moving',
         subTitle: 'Create more space with our short- and long-term storage—the best solution in Toronto and the GTA',
         subTitle2: 'Storage for all your possessions',
         gallery: [
@@ -185,7 +185,7 @@ export const servicesList = [
         title: 'Commercial relocation',
         icon: <CommerceIcon />,
         about: 'Whether you’re moving a small start-up from a co-working space or a large corporate office with dozens of desks, we’re here to help. We relocate your business quickly and safely, so you can get back to work without missing a beat. Trust us to handle your important business items with care. With us, your office move in Toronto is smooth and stress-free.\n\nWe have extensive experience in carefully packing and handling fragile and essential business technology. At First Class Movers, we use specialized packing materials and boxes to ensure these items are safely transported to your new office in perfect condition.',
-        link: '/services/commercial-moving',
+        link: '/services/toronto-commercial-moving',
         subTitle: 'Reduce business downtime with the number one office mover in Toronto & GTA',
         subTitle2: 'We’re not just residential movers — We’re experts in office relocations',
         gallery: [
@@ -230,7 +230,7 @@ export const servicesList = [
         title: 'Special items moving',
         icon: <SpecialIcon />,
         about: 'It takes special training, professional expertise, and the right equipment to safely move pianos, pool tables, hot tubs, and other heavy, awkward items. Despite their size and weight, these pieces need to be protected both inside and out.\n\nYou want movers who are careful, caring, and knowledgeable. Our team treats your valuable possessions with the utmost respect, ensuring they arrive safely at your new location.\n\nFor a free quote, reach out to our Customer Service Team. We’ll offer competitive pricing based on your item type and delivery challenges, like stairways. Once we provide your quote, it’s locked in—no surprises on moving day, including reassembly time.',
-        link: '/services/special-moving',
+        link: '/services/toronto-special-items-moving',
         subTitle: 'Trusted Movers for Heavy and Special Items',
         subTitle2: 'Moving Heavy Items with Care',
         gallery: [
@@ -275,7 +275,7 @@ export const servicesList = [
         title: 'Packing',
         icon: <PackagingIcon />,
         about: 'Our full packing service handles everything at your pick-up location, so you don’t have to worry. Whether you want us to pack all or just some of your belongings, we’ve got you covered. Your boxes and items will be securely delivered, allowing you to unpack at your own pace — or let us do it for you.\n\nWe know moving often happens during important life moments. With our team packing and clearly labeling everything, unpacking in your new home becomes an easy and enjoyable experience.',
-        link: '/services/packing-moving',
+        link: '/services/toronto-packing-service',
         subTitle: 'We can pack everything in your home or just some of it. Relax — our packing service handles it all for you',
         subTitle2: 'Let us lighten your load—our team will handle all the packing for you.',
         gallery: [
@@ -333,7 +333,7 @@ export const questionsList = [
     {
         id: 3,
         question: 'When I will be charged for my move?',
-        answer: 'To reserve a crew we require a $50 deposit (online payment form), which goes towards the total of your moving cost. The remaining balance is due 2 hours before ending the move.',
+        answer: 'To reserve a crew we require refundable deposit (online payment form), which goes towards the total of your moving cost. The remaining balance is due 2 hours before ending the move.',
         type: 0
     },
     {
