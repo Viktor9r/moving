@@ -1,7 +1,7 @@
 import { styled } from "@mui/material";
 import { Link } from "react-router-dom";
 
-export const StyledFAQPage = styled('div')(() => ({
+export const StyledFAQPage = styled('section')(() => ({
     margin: '0 auto',
     background: '#e3e3e3',
     height: 'calc(100vh - 170px)',
@@ -43,7 +43,7 @@ export const StyledFAQPageTopLeft = styled('div')(() => ({
     gap: '24px',
 }))
 
-export const StyledFAQPageTitle = styled('div')(() => ({
+export const StyledFAQPageTitle = styled('h2')(() => ({
     color: '#000',
     fontWeight: 600,
     fontSize: '44px',
@@ -53,13 +53,13 @@ export const StyledFAQPageTitle = styled('div')(() => ({
     }
 }))
 
-export const StyledFAQPageSubTitle = styled('div')(() => ({
+export const StyledFAQPageSubTitle = styled('p')(() => ({
     color: '#000',
     fontSize: '14px',
     fontWeight: 500,
 }))
 
-export const StyledFAQPageTip = styled('div')(() => ({
+export const StyledFAQPageTip = styled('span')(() => ({
     color: 'grey',
     fontSize: '14px',
     fontWeight: 500,
@@ -75,7 +75,7 @@ export const StyledFAQPageTopRight = styled('div')(() => ({
     }
 }))
 
-export const StyledFAQPageQuestionsList = styled('div')(() => ({
+export const StyledFAQPageQuestionsList = styled('ul')(() => ({
     maxWidth: '1100px',
     margin: '0 auto',
     display: 'flex',
@@ -86,7 +86,7 @@ export const StyledFAQPageQuestionsList = styled('div')(() => ({
     overflow: 'scroll'
 }))
 
-export const StyledFAQPageCell = styled('div')(() => ({
+export const StyledFAQPageCell = styled('li')(() => ({
     display: 'flex',
     flexDirection: 'column',
     padding: '20px',
@@ -138,7 +138,7 @@ export const StyledFAQIconCellNumber = styled('div')(() => ({
     color: '#000'
 }))
 
-export const StyledFAQCellTitle = styled('div')(() => ({
+export const StyledFAQCellTitle = styled('p')(() => ({
     color: '#000',
     fontWeight: 600,
     fontSize: '24px',
@@ -148,7 +148,7 @@ export const StyledFAQCellTitle = styled('div')(() => ({
     }
 }))
 
-export const StyledFAQCellAnswer = styled('div')(() => ({
+export const StyledFAQCellAnswer = styled('p')(() => ({
     color: '#000',
     fontSize: '17px',
     fontWeight: 500,

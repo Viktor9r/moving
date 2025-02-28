@@ -4,7 +4,7 @@ interface IBackground {
     background: string
 }
 
-export const StyledServicePageMain = styled('div')<IBackground>(({ background }) => ({
+export const StyledServicePageMain = styled('section')<IBackground>(({ background }) => ({
     margin: '0 auto',
     backgroundImage: `url(${background})`,
     backgroundSize: 'cover',
@@ -51,7 +51,7 @@ export const StyledServicePageTop = styled('div')(() => ({
     }
 }))
 
-export const StyledServicePageTitle = styled('div')(() => ({
+export const StyledServicePageTitle = styled('h1')(() => ({
     color: '#fff',
     fontWeight: 600,
     fontSize: '44px',
@@ -61,7 +61,7 @@ export const StyledServicePageTitle = styled('div')(() => ({
     }
 }))
 
-export const StyledServicePageSubTitle = styled('div')(() => ({
+export const StyledServicePageSubTitle = styled('h4')(() => ({
     color: '#fff',
     fontSize: '18px',
     fontWeight: 500,
@@ -86,7 +86,7 @@ export const StyledServicePageTopButton = styled(Button)(() => ({
     }
 }))
 
-export const StyledServicePageAbout = styled('div')(() => ({
+export const StyledServicePageAbout = styled('p')(() => ({
     margin: '0 auto',
     background: '#e3e3e3',
     height: 'calc(100vh - 170px)',

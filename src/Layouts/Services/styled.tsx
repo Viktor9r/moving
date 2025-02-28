@@ -2,7 +2,7 @@ import { Height } from "@mui/icons-material";
 import { styled } from "@mui/material";
 import { Link } from "react-router-dom";
 
-export const StyledServicesPage = styled('div')(() => ({
+export const StyledServicesPage = styled('section')(() => ({
     margin: '0 auto',
     background: '#e3e3e3',
     height: 'calc(100vh - 170px)',
@@ -39,7 +39,7 @@ export const StyledServicesPageTop = styled('div')(() => ({
     }
 }));
 
-export const StyledServicesPageTitle = styled('div')(() => ({
+export const StyledServicesPageTitle = styled('h2')(() => ({
     color: '#000',
     fontWeight: 600,
     fontSize: '44px',
@@ -50,7 +50,7 @@ export const StyledServicesPageTitle = styled('div')(() => ({
     }
 }))
 
-export const StyledServicesPageSubTitle = styled('div')(() => ({
+export const StyledServicesPageSubTitle = styled('h3')(() => ({
     color: '#000',
     fontSize: '14px',
     fontWeight: 500,
@@ -61,7 +61,7 @@ export const StyledServicesPageSubTitle = styled('div')(() => ({
     }
 }))
 
-export const StyledServicesPageList = styled('div')(() => ({
+export const StyledServicesPageList = styled('ul')(() => ({
     display: 'flex',
     gap: '8px',
     flexWrap: 'wrap',
@@ -70,7 +70,7 @@ export const StyledServicesPageList = styled('div')(() => ({
     maxWidth: '1100px',
 }))
 
-export const StyledServiceCell = styled('div')(() => ({
+export const StyledServiceCell = styled('li')(() => ({
     minWidth: 'calc(100% / 3 - 46px)',
     maxWidth: 'calc(100% / 3 - 46px)',
     background: '#fff',
@@ -102,7 +102,7 @@ export const StyledServiceCellLeft = styled('div')(() => ({
     }
 }))
 
-export const StyledServiceCellTitle = styled('div')(({
+export const StyledServiceCellTitle = styled('h3')(({
     fontWeight: 600,
     fontSize: '22px',
     height: '44px',
@@ -112,7 +112,7 @@ export const StyledServiceCellTitle = styled('div')(({
     }
 }))
 
-export const StyledServiceCellAbout = styled('div')(({
+export const StyledServiceCellAbout = styled('p')(({
     fontWeight: 500,
     fontSize: '14px',
     overflow: 'hidden',

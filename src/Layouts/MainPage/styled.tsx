@@ -1,7 +1,7 @@
 import { Button, styled } from "@mui/material";
 import background from '../../resources/images/truckkkk.png';
 
-export const StyledMainPage = styled('div')(() => ({
+export const StyledMainPage = styled('section')(() => ({
     margin: '0 auto',
     backgroundImage: `url(${background})`,
     backgroundSize: 'cover',
@@ -40,7 +40,7 @@ export const StyledMainPageTop = styled('div')(() => ({
     }
 }))
 
-export const StyledMainPageTitle = styled('div')(() => ({
+export const StyledMainPageTitle = styled('h1')(() => ({
     color: '#fff',
     fontWeight: 600,
     fontSize: '44px',
@@ -60,7 +60,7 @@ export const StyledMainPageTitle = styled('div')(() => ({
     }
 }))
 
-export const StyledMainPageSubTitle = styled('div')(() => ({
+export const StyledMainPageSubTitle = styled('h3')(() => ({
     color: '#fff',
     backdropFilter: 'blur(14px)',
     borderRadius: '40px',

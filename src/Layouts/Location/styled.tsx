@@ -1,6 +1,6 @@
 import { styled } from "@mui/material";
 
-export const StyledLocationPage = styled('div')(() => ({
+export const StyledLocationPage = styled('section')(() => ({
     margin: '0 auto',
     background: '#e3e3e3',
     height: 'calc(100vh - 170px)',
@@ -36,7 +36,7 @@ export const StyledLocationPageTop = styled('div')(() => ({
     }
 }))
 
-export const StyledFLocationPageTitle = styled('div')(() => ({
+export const StyledFLocationPageTitle = styled('h2')(() => ({
     color: '#000',
     fontWeight: 600,
     fontSize: '44px',
@@ -69,7 +69,7 @@ export const StyledLocationPageMapBlock = styled('div')(() => ({
     }
 }))
 
-export const StyledLocationCell = styled('div')(() => ({
+export const StyledLocationCell = styled('li')(() => ({
     padding: '10px 14px',
     borderRadius: '20px',
     background: '#fff',
@@ -88,7 +88,7 @@ export const StyledLocationCell = styled('div')(() => ({
     }
 }))
 
-export const StyledLocationsList = styled('div')(() => ({
+export const StyledLocationsList = styled('ul')(() => ({
     display: 'flex',
     gap: '8px',
     flexWrap: 'wrap'

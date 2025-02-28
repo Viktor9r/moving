@@ -1,6 +1,6 @@
 import { Button, styled } from "@mui/material";
 
-export const StyledTrustPage = styled('div')(() => ({
+export const StyledTrustPage = styled('section')(() => ({
     margin: '0 auto',
     background: '#e3e3e3',
     height: 'calc(60vh)',
@@ -31,7 +31,7 @@ export const StyledTrustPageTop = styled('div')(() => ({
     alignItems: 'flex-start'
 }));
 
-export const StyledTrustPageTitle = styled('div')(() => ({
+export const StyledTrustPageTitle = styled('h2')(() => ({
     color: '#000',
     fontWeight: 600,
     fontSize: '44px',
@@ -52,7 +52,7 @@ export const StyledTrustPageTopUnder = styled('div')(() => ({
     justifyContent: 'space-between'
 }));
 
-export const StyledTrustPageSubTitle = styled('div')(() => ({
+export const StyledTrustPageSubTitle = styled('p')(() => ({
     color: '#000',
     fontSize: '14px',
     fontWeight: 500,
@@ -83,7 +83,7 @@ export const TrustPageOptionsQuoteButton = styled(Button)(() => ({
     }
 }))
 
-export const StyledTrustPageList = styled('div')(() => ({
+export const StyledTrustPageList = styled('ul')(() => ({
     maxWidth: '1100px',
     margin: '0 auto',
     width: '100%',
@@ -99,7 +99,7 @@ export const StyledTrustPageList = styled('div')(() => ({
     }
 }))
 
-export const StyledTrustPageCell = styled('div')(() => ({
+export const StyledTrustPageCell = styled('li')(() => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-start',
@@ -120,7 +120,7 @@ export const StyledTrustPageCell = styled('div')(() => ({
     }
 }));
 
-export const StyledTrustPageCellTitle = styled('div')(() => ({
+export const StyledTrustPageCellTitle = styled('h4')(() => ({
     fontWeight: 500,
     fontSize: '14px',
     lineHeight: '1.25',

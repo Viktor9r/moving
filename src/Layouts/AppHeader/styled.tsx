@@ -97,7 +97,7 @@ export const HeaderPipe = styled('div')(() => ({
     margin: '0 12px',
 }))
 
-export const HeaderLangValue = styled('div')(() => ({
+export const HeaderLangValue = styled('h5')(() => ({
     fontSize: '16px',
     textTransform: 'uppercase',
     color: '#00302E',
@@ -109,7 +109,7 @@ export const HeaderLangValue = styled('div')(() => ({
     },
 }))
 
-export const MobileHeaderButton = styled('div')(() => ({
+export const MobileHeaderButton = styled('button')(() => ({
     ['svg']: {
         fill: '#00302E',
         transform: 'scale(1.35)'

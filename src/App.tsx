@@ -1,4 +1,4 @@
-import  { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import { DesktopLayout } from './Layouts/DesktopLayout/DesktopLayout';
 import { Route, Routes, useLocation } from 'react-router-dom';
@@ -9,6 +9,7 @@ import { servicesList } from './resources/data/arrays';
 import { useOpenQuoteDialog } from './Storages/useOpenQuoteDialog';
 import { QuoteDialog } from './Layouts/Dialogs/QuoteDialog/QuoteDialog';
 import { FAQPage } from './Layouts/FAQPage/FAQPage';
+import { CustomLoader } from './Layouts/Loader/Loader';
 
 function App() {
   const location = useLocation()
@@ -37,6 +38,15 @@ function App() {
   }, [location, setVisibleService]);
 
   const { openQuoteDialog, setOpenQuoteDialog } = useOpenQuoteDialog()
+
+  // const [loading, setLoading] = useState(true)
+
+  // useEffect(() => {
+  //   setTimeout(() => setLoading(false), 4000)
+  // }, [])
+  // if (loading) {
+  //   return <CustomLoader />
+  // }
 
   return (
     <div className="App">

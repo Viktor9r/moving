@@ -1,7 +1,7 @@
 import { styled } from "@mui/material";
 import { Link } from "react-router-dom";
 
-export const StyledFooter = styled('div')(() => ({
+export const StyledFooter = styled('footer')(() => ({
     margin: '0 auto',
     background: '#e3e3e3',
     height: 'calc(44vh)',
@@ -39,7 +39,7 @@ export const StyledFooterColumn = styled('div')(() => ({
     }
 }))
 
-export const StyledFooterColumnTitle = styled('div')(() => ({
+export const StyledFooterColumnTitle = styled('h3')(() => ({
     color: '#000',
     fontWeight: 600,
     fontSize: '30px',
@@ -56,7 +56,7 @@ export const StyledFooterColumnContent = styled('div')(() => ({
     gap: '12px',
 }))
 
-export const StyledFooterColumnGreyText = styled('div')(() => ({
+export const StyledFooterColumnGreyText = styled('p')(() => ({
     color: 'grey',
     fontWeight: 500,
     fontSize: '14px',

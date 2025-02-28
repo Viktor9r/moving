@@ -1,7 +1,7 @@
 import { styled } from "@mui/material";
 import { Link } from "react-router-dom";
 
-export const StyledReviewsSection = styled('div')(() => ({
+export const StyledReviewsSection = styled('section')(() => ({
     margin: '0 auto',
     background: '#e3e3e3',
     height: 'calc(70vh)',
@@ -37,7 +37,7 @@ export const StyledReviewsSectionTop = styled('div')(() => ({
     }
 }))
 
-export const StyledReviewsSectionTitle = styled('div')(() => ({
+export const StyledReviewsSectionTitle = styled('h2')(() => ({
     color: '#000',
     fontWeight: 600,
     fontSize: '44px',
@@ -121,13 +121,13 @@ export const StyledReviewCellTop = styled('div')(() => ({
     overflow: 'hidden'
 }))
 
-export const StyledReviewCellDate = styled('div')(() => ({
+export const StyledReviewCellDate = styled('p')(() => ({
     color: 'grey',
     fontWeight: 500,
     fontSize: '14px',
 }))
 
-export const StyledReviewCellReview = styled('div')(() => ({
+export const StyledReviewCellReview = styled('p')(() => ({
     color: '#000',
     fontWeight: 500,
     fontSize: '14px',
@@ -179,7 +179,7 @@ export const StyledReviewCellBottomLeft = styled('div')(() => ({
     gap: '10px',
 }))
 
-export const StyledReviewCellName = styled('div')(() => ({
+export const StyledReviewCellName = styled('p')(() => ({
     color: '#000',
     fontWeight: 600,
     fontSize: '18px',

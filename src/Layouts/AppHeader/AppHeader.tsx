@@ -52,7 +52,7 @@ export const AppHeader: React.FC<IProps> = () => {
                 <HeaderInnerContainer>
                     <HeaderInnerInnerContainer>
                         <HeaderLeftPart to={"/"}>
-                            <HeaderLogo loading="lazy" src={logo} />
+                            <HeaderLogo alt="First Class Movers" loading="lazy" src={logo} />
                         </HeaderLeftPart>
 
                         <HeaderRightPart>

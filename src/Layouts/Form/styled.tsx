@@ -1,7 +1,7 @@
 import { Button, styled } from "@mui/material";
 import { Link } from "react-router-dom";
 
-export const StyledFormPage = styled('div')(() => ({
+export const StyledFormPage = styled('section')(() => ({
     margin: '0 auto',
     background: '#00302E',
     height: 'calc(100vh - 170px)',
@@ -21,7 +21,7 @@ export const StyledFormPageTop = styled('div')(() => ({
     margin: '0 auto'
 }))
 
-export const StyledFormPageTitle = styled('div')(() => ({
+export const StyledFormPageTitle = styled('h2')(() => ({
     color: '#fff',
     fontWeight: 600,
     fontSize: '44px',
@@ -48,7 +48,7 @@ export const StyledFormPageBottomLeft = styled('div')(() => ({
     width: '35%'
 }))
 
-export const StyledFormPageBottomTitle = styled('div')(() => ({
+export const StyledFormPageBottomTitle = styled('h3')(() => ({
     color: '#fff',
     fontWeight: 600,
     fontSize: '30px',
@@ -67,7 +67,7 @@ export const StyledFormPageBottomLeftBottomBlock = styled('div')(() => ({
     cursor: 'pointer'
 }))
 
-export const StyledFormPageBottomLeftTitle = styled('div')(() => ({
+export const StyledFormPageBottomLeftTitle = styled('p')(() => ({
     color: 'grey',
     fontWeight: 500,
     fontSize: '14px',

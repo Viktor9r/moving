@@ -1,7 +1,7 @@
 import { Button, styled } from "@mui/material";
 import greentruck from '../../resources/images/greentruck.png'
 
-export const StyledCalculateSection = styled('div')(() => ({
+export const StyledCalculateSection = styled('section')(() => ({
     margin: '0 auto',
     background: '#00302E',
     height: 'calc(40vh)',
@@ -43,7 +43,7 @@ export const StyledCalculateSectionLeft = styled('div')(() => ({
     }
 }))
 
-export const StyledCalculateSectionTitle = styled('div')(() => ({
+export const StyledCalculateSectionTitle = styled('h2')(() => ({
     color: '#fff',
     fontWeight: 600,
     fontSize: '44px',
@@ -53,7 +53,7 @@ export const StyledCalculateSectionTitle = styled('div')(() => ({
     }
 }))
 
-export const StyledCalculateSectionSubTitle = styled('div')(() => ({
+export const StyledCalculateSectionSubTitle = styled('p')(() => ({
     color: '#fff',
     fontSize: '14px',
     fontWeight: 500,

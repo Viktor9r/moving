@@ -1,7 +1,7 @@
 import { Button, styled } from "@mui/material";
 import { Link } from "react-router-dom";
 
-export const StyledMainPageOptions = styled('div')(() => ({
+export const StyledMainPageOptions = styled('section')(() => ({
     height: '100px',
     color: '#000',
     // margin: 'auto',
@@ -13,7 +13,7 @@ export const StyledMainPageOptions = styled('div')(() => ({
     // maxWidth: '1100px'
 }))
 
-export const MainPageOptionsList = styled('div')(() => ({
+export const MainPageOptionsList = styled('ul')(() => ({
     display: 'flex',
     gap: '20px',
     alignItems: 'center',
